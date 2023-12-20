@@ -1,0 +1,272 @@
+@import "react-toastify/dist/ReactToastify.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply !m-0 !p-0 !box-border bg-gray-100
+}
+
+/* scrollbar css  */
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-gray-400
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-950
+}
+
+
+/* Animations  */
+
+.slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+:root {
+  --swiper-navigation-size: 20px;
+}
+
+.swiper-scrollbar-drag {
+  width: 100%;
+  position: relative;
+  background: var(--swiper-scrollbar-drag-bg-color, rgba(0, 0, 0, 0.5));
+  border-radius: var(--swiper-scrollbar-border-radius, 10px);
+  left: 0;
+  top: 0;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: var(--swiper-navigation-top-offset, 50%);
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--swiper-navigation-color, var(--swiper-theme-color));
+}
+
+body {
+  @apply !m-0 !p-0 !box-border bg-gray-100;
+}
+
+/* Swiper  */
+.swiper-button-prev {
+  @apply pl-32
+}
+
+.swiper-button-next {
+  @apply pr-32
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  @apply text-gray-500
+}
+
+.swiper-pagination-bullet {
+  @apply !w-8 !h-1 !rounded-none
+}
+
+.swiper-pagination-bullet-active {
+  @apply !bg-black
+}
+
+.discount-sec {
+  background-image: url("../img/discount.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 450px;
+  width: 100%;
+}
+
+/* Container for the image and overlay */
+.image-container {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+}
+
+/* The image to be scaled */
+.blogimg {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+/* The overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Hover effect */
+.image-container:hover .blogimg {
+  transform: scale(1.1);
+  /* Adjust the scaling factor as needed */
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+  /* Show the overlay on hover */
+}
+
+.redunderline {
+  text-decoration: none;
+  position: relative;
+}
+
+.redunderline:after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 50px;
+  background: #E52E06;
+  bottom: 20px;
+  /* optional animation */
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.3s;
+}
+
+.redunderline:hover:after {
+  width: 130px;
+  background: #E52E06;
+}
+
+.discount {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+/* Style the image */
+.image {
+  width: 100%;
+  height: 400px;
+  height: auto;
+}
+
+/* Style the text overlay */
+.discount-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Hover effect */
+.discount:hover .image {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.Pcontainer {
+  transform: translate(-50%, -50%);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
