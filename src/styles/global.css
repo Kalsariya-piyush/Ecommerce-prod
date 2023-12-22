@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700;900&display=swap');
+
 @import "react-toastify/dist/ReactToastify.css";
 
 @tailwind base;
@@ -5,7 +7,7 @@
 @tailwind utilities;
 
 body {
-  @apply !m-0 !p-0 !box-border bg-gray-100
+  @apply !m-0 !p-0 !box-border bg-gray-100 font-lato
 }
 
 /* scrollbar css  */

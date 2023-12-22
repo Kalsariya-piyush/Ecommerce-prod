@@ -10,6 +10,9 @@ module.exports = {
       lg: '1024px',
       xl: '1280px',
     },
+    fontFamily: {
+      lato: 'Lato',
+    },
     fontSize: {
       xs: '0.75rem',
       sm: '0.875rem',
@@ -46,9 +49,20 @@ module.exports = {
           800: '#2c5282',
           900: '#2a4365',
         },
+        base: {
+          50: '#292929',
+          75: '#676767',
+          100: '#525252',
+        },
+      },
+      lineHeight: {
+        130: '130%',
       },
       minWidth: {
         sm: '320px',
+      },
+      maxWidth: {
+        '340px': '340px',
       },
     },
   },
