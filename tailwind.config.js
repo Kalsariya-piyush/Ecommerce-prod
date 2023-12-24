@@ -12,6 +12,7 @@ module.exports = {
     },
     fontFamily: {
       lato: 'Lato',
+      poppins: 'Poppins',
     },
     fontSize: {
       xs: '0.75rem',
@@ -28,6 +29,7 @@ module.exports = {
     extend: {
       colors: {
         gray: {
+          50: '#F2F4FF',
           100: '#f7fafc',
           200: '#edf2f7',
           300: '#e2e8f0',
@@ -39,6 +41,7 @@ module.exports = {
           900: '#1a202c',
         },
         blue: {
+          25: '#E3E7FC',
           100: '#ebf8ff',
           200: '#bee3f8',
           300: '#90cdf4',
@@ -48,11 +51,15 @@ module.exports = {
           700: '#2b6cb0',
           800: '#2c5282',
           900: '#2a4365',
+          950: '#475BE8',
         },
         base: {
           50: '#292929',
           75: '#676767',
           100: '#525252',
+        },
+        green: {
+          100: '#4CE13F',
         },
       },
       lineHeight: {
@@ -63,6 +70,9 @@ module.exports = {
       },
       maxWidth: {
         '340px': '340px',
+      },
+      spacing: {
+        4.5: '18px',
       },
     },
   },
