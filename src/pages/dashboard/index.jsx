@@ -1,5 +1,5 @@
 import AverageCard from '@/components/Cards/AverageCard';
-import Barchart from '@/components/Dashboard/Barchart';
+import DataChart from '@/components/Dashboard/DataChart';
 import Layout from '@/layouts/Layout';
 
 const DATA = [
@@ -44,8 +44,8 @@ const Index = () => {
           ))}
 
           {/* Graph  */}
-          <div className="col-span-2">
-            <Barchart />
+          <div className="col-span-2 bg-white rounded-md py-5 px-4 w-full">
+            <DataChart />
           </div>
         </div>
       </div>

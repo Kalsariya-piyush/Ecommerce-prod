@@ -153,6 +153,15 @@ body {
   @apply !bg-black
 }
 
+/* Mui css overwrite  */
+.MuiChartsAxis-tick {
+  @apply !hidden
+}
+
+.MuiChartsAxis-tickLabel tspan {
+  @apply text-base-75 text-xs font-bold leading-130
+}
+
 .discount-sec {
   background-image: url("../img/discount.jpeg");
   background-size: cover;
