@@ -106,7 +106,7 @@ const Index = () => {
           </div>
 
           {/* Latest orders */}
-          <div className="col-span-3 w-full">
+          {/* <div className="col-span-3 w-full">
             <table className="w-full">
               <thead>
                 <tr className="bg-gray-50">
@@ -131,7 +131,7 @@ const Index = () => {
                 </tr>
               </tbody>
             </table>
-          </div>
+          </div> */}
         </div>
       </div>
     </Layout>
