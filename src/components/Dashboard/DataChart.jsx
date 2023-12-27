@@ -1,7 +1,7 @@
 import priceFormatter from '@/constants';
 import { BarChart } from '@mui/x-charts/BarChart';
 import { FaCircle } from 'react-icons/fa';
-import UpArrowIcon from '../Icons/UpArrowICon';
+import UpArrowIcon from '../Icons/UpArrowIcon';
 
 export default function BasicBars() {
   return (
