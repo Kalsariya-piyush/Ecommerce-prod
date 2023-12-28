@@ -51,6 +51,7 @@ const SideNav = () => {
   const { currentUser, LogoutHandler } = useAuth();
 
   const [isOpenMenuList, setIsOpenMenuList] = useState(false);
+  const [isOpenDrawer, setIsOpenDrawer] = useState(false);
 
   return (
     <div>
@@ -60,7 +61,8 @@ const SideNav = () => {
             <div className="flex items-center justify-start">
               <button
                 type="button"
-                className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                onClick={() => setIsOpenDrawer(!isOpenDrawer)}
               >
                 <span className="sr-only">Open sidebar</span>
                 <svg
@@ -154,7 +156,9 @@ const SideNav = () => {
 
       <aside
         id="logo-sidebar"
-        className="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+        className={`fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform ${
+          isOpenDrawer ? 'translate-x-0' : '-translate-x-full'
+        } bg-white border-r border-gray-200 lg:translate-x-0 dark:bg-gray-800 dark:border-gray-700`}
         aria-label="Sidebar"
       >
         <div className="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">

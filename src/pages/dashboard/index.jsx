@@ -65,7 +65,7 @@ const Index = () => {
       <div className="flex flex-col gap-3 max-w-7xl">
         <h1 className="text-2xl font-semibold">Dashboard</h1>
 
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {DATA.map(({ id, avgPrice, description, fillColor, title }) => (
             <AverageCard
               key={id}
@@ -77,7 +77,7 @@ const Index = () => {
           ))}
 
           {/* Graph  */}
-          <div className="col-span-2 bg-white flex flex-col rounded-md py-5 w-full">
+          <div className="col-span-1 md:col-span-2 bg-white flex flex-col rounded-md py-5 w-full">
             <DataChart />
           </div>
 
