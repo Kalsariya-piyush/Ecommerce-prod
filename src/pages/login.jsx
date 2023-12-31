@@ -62,7 +62,7 @@ const Login = () => {
             <Link href="/login" className="w-full">
               <Button
                 type="button"
-                className="w-full font-public-sans text-base font-semibold leading-140 rounded-none capitalize text-gray-900 py-4 hover:bg-white"
+                className="!w-full !font-public-sans !text-base !font-semibold !leading-140 !rounded-none !capitalize !text-gray-900 !py-4 !hover:bg-white"
                 style={{
                   boxShadow: '0px -3px 0px 0px #FA8232 inset',
                   borderRadius: '0px',
@@ -74,7 +74,7 @@ const Login = () => {
             <Link href="/sign-up" className="w-full">
               <Button
                 type="button"
-                className="w-full font-public-sans text-base font-semibold leading-140 rounded-none capitalize text-gray-500 py-4 hover:bg-white"
+                className="!w-full !font-public-sans !text-base !font-semibold !leading-140 !rounded-none !capitalize !text-gray-900 !py-4 !hover:bg-white"
                 style={{
                   boxShadow: '0px -3px 0px 0px #FFF inset',
                   borderRadius: '0px',
@@ -139,7 +139,7 @@ const Login = () => {
 
               <Button
                 type="submit"
-                className="w-full font-public-sans text-base font-semibold leading-140 rounded bg-primary-500 text-white py-4 hover:bg-primary-500/90"
+                className="!w-full !font-public-sans !text-base !font-semibold !leading-140 !rounded !bg-primary-500 !text-white !py-4 !hover:bg-primary-500/90"
               >
                 Sign In
               </Button>
