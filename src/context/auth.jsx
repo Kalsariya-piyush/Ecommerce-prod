@@ -1,4 +1,5 @@
-import { getCurrentUser, logOutHandler } from '@/pages/api/auth';
+import { GetCurrentUser } from '@/functions/auththenticaion';
+import { logOutHandler } from '@/pages/api/auth';
 import { useRouter } from 'next/router';
 import { createContext, useContext, useEffect, useState } from 'react';
 
@@ -13,12 +14,12 @@ export const AuthProvider = ({ children }) => {
   const getUser = async () => {
     setIsLoadingUser(true);
 
-    getCurrentUser()
+    GetCurrentUser()
       .then((res) => {
         setCurrentUser(res.data);
         setIsLoadingUser(false);
       })
-      .catch((error) => {
+      .catch((err) => {
         console.error(error.message);
         setIsLoadingUser(false);
       });

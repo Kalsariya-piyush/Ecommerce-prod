@@ -4,6 +4,12 @@ export const getCookie = () => {
   if (parts.length === 2) return parts.pop().split(';').shift();
 };
 
+const token = () => {
+  if (typeof window !== 'undefined') {
+    return localStorage.getItem('token');
+  }
+};
+
 const priceFormatter = (number) => {
   if (number >= 1000 && number < 1000000) {
     return `${(number / 1000).toFixed()}k`;
@@ -13,5 +19,7 @@ const priceFormatter = (number) => {
     return number.toString();
   }
 };
+
+export { token };
 
 export default priceFormatter;

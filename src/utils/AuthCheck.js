@@ -1,13 +1,15 @@
 import jwt from 'jsonwebtoken';
 import nookies from 'nookies';
 
+const jwtSecret = 'abcsefghiasdbkbajskdbasnndlkbvdnbmxnhlakjsmhdkbm';
+
 export const IsAuthenticated = async (ctx) => {
   const cookies = nookies.get(ctx);
-  const jwtToken = cookies.jwt;
+  const jwtToken = cookies.refreshToken;
 
   if (jwtToken) {
-    const claims = jwt.verify(jwtToken, 'secret');
-    const uid = claims._id;
+    const claims = jwt.verify(jwtToken, jwtSecret);
+    const uid = claims.id;
 
     if (uid) {
       return {
@@ -30,11 +32,11 @@ export const IsAuthenticated = async (ctx) => {
 
 export const AuthCheck = async (ctx) => {
   const cookies = nookies.get(ctx);
-  const jwtToken = cookies.jwt;
+  const jwtToken = cookies.refreshToken;
 
   if (jwtToken) {
-    const claims = jwt.verify(jwtToken, 'secret');
-    const uid = claims._id;
+    const claims = jwt.verify(jwtToken, jwtSecret);
+    const uid = claims.id;
 
     if (uid) {
       return {
