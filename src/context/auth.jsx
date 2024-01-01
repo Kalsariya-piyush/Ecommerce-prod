@@ -1,5 +1,4 @@
-import { GetCurrentUser } from '@/functions/auththenticaion';
-import { logOutHandler } from '@/pages/api/auth';
+import { GetCurrentUser, HandleLogout } from '@/functions/auththenticaion';
 import { useRouter } from 'next/router';
 import { createContext, useContext, useEffect, useState } from 'react';
 
@@ -25,12 +24,12 @@ export const AuthProvider = ({ children }) => {
       });
   };
 
-  const LogoutHandler = async () => {
-    logOutHandler()
+  const LogoutHandler = () => {
+    HandleLogout()
       .then(() => {
         setCurrentUser(null);
-        document.cookie = 'jwt=; Max-Age=0';
-        router.push('/sign-in');
+        document.cookie = 'accessToken=; Max-Age=0';
+        // router.push('/login');
       })
       .catch((error) => {
         console.error('Error occurs', error);

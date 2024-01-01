@@ -1,4 +1,4 @@
-import { getCookie } from '@/constants';
+import { token } from '@/constants';
 import axios from 'axios';
 
 // get products which added in cart
@@ -7,7 +7,7 @@ export const getCart = async () => {
     `${process.env.NEXT_PUBLIC_API_ENDPOINT}/cart`,
     {
       headers: {
-        Authorization: `Bearer ${getCookie()}`,
+        Authorization: `Bearer ${token()}`,
         'Content-Type': 'application/json',
       },
     },
@@ -29,7 +29,7 @@ export const deleteCartProduct = async (productId) => {
     {
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${getCookie()}`,
+        Authorization: `Bearer ${token()}`,
       },
       withCredentials: true,
     }

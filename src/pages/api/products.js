@@ -1,4 +1,4 @@
-import { getCookie } from '@/constants';
+import { token } from '@/constants';
 import axios from 'axios';
 
 // add products By admin
@@ -16,7 +16,7 @@ export const addProductHandler = async (data) => {
     {
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${getCookie()}`,
+        Authorization: `Bearer ${token()}`,
       },
       withCredentials: true,
     }
@@ -38,7 +38,7 @@ export const getProductsHandler = async () => {
     {
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${getCookie()}`,
+        Authorization: `Bearer ${token()}`,
       },
       withCredentials: true,
     }
@@ -53,7 +53,7 @@ export const getProductByIdHandler = async (productId) => {
     {
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${getCookie()}`,
+        Authorization: `Bearer ${token()}`,
       },
       withCredentials: true,
     }
@@ -71,7 +71,7 @@ export const addToCart = async (productId) => {
     {
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${getCookie()}`,
+        Authorization: `Bearer ${token()}`,
       },
       withCredentials: true,
     }
@@ -86,7 +86,7 @@ export const getEditProduct = async (productId) => {
     {
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${getCookie()}`,
+        Authorization: `Bearer ${token()}`,
       },
       withCredentials: true,
     }
@@ -104,7 +104,7 @@ export const searchProducts = async (minPrice, maxPrice, title) => {
     {
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${getCookie()}`,
+        Authorization: `Bearer ${token()}`,
       },
       withCredentials: true,
     }
@@ -124,7 +124,7 @@ export const postUpdateProduct = async (product) => {
     {
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${getCookie()}`,
+        Authorization: `Bearer ${token()}`,
       },
       withCredentials: true,
     }
@@ -143,7 +143,7 @@ export const deleteProduct = async (productId) => {
     {
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${getCookie()}`,
+        Authorization: `Bearer ${token()}`,
       },
       withCredentials: true,
     }

@@ -1,13 +1,7 @@
-export const getCookie = () => {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; jwt=`);
-  if (parts.length === 2) return parts.pop().split(';').shift();
-};
-
 const token = () => {
-  if (typeof window !== 'undefined') {
-    return localStorage.getItem('token');
-  }
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; accessToken=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
 };
 
 const priceFormatter = (number) => {

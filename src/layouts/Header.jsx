@@ -129,7 +129,7 @@ const Header = () => {
                     ) : (
                       <Link
                         className="text-white bg-gray-800 px-3 -mt-1 pt-1 py-[5px] rounded-lg"
-                        href="/sign-in"
+                        href="/login"
                       >
                         Login
                       </Link>
@@ -146,7 +146,7 @@ const Header = () => {
                 ) : (
                   <Link
                     className="text-white bg-gray-800 px-3 pt-[5px] rounded-lg"
-                    href="/sign-in"
+                    href="/login"
                   >
                     Login
                   </Link>
@@ -205,7 +205,7 @@ const Header = () => {
                     </button>
                   ) : (
                     <Link
-                      href="/sign-in"
+                      href="/login"
                       className="rounded-md px-[6px] py-5 text-sm font-medium text-gray-300 hover:bg-gray-900 hover:text-white block"
                     >
                       Login

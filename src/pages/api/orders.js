@@ -1,4 +1,4 @@
-import { getCookie } from '@/constants';
+import { token } from '@/constants';
 import axios from 'axios';
 
 export const createOrderHandler = async () => {
@@ -8,7 +8,7 @@ export const createOrderHandler = async () => {
     {
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${getCookie()}`,
+        Authorization: `Bearer ${token()}`,
       },
       withCredentials: true,
     }
@@ -23,7 +23,7 @@ export const getOrders = async () => {
     {
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${getCookie()}`,
+        Authorization: `Bearer ${token()}`,
       },
       withCredentials: true,
     }

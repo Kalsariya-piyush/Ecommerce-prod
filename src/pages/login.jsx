@@ -17,11 +17,23 @@ const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
 
+  const setCookie = (name, value, options = {}) => {
+    let cookieString = `${encodeURIComponent(name)}=${encodeURIComponent(
+      value
+    )}`;
+
+    for (const option in options) {
+      cookieString += `; ${option}=${options[option]}`;
+    }
+
+    document.cookie = cookieString;
+  };
+
   const { handleBlur, handleChange, handleSubmit, errors, touched, values } =
     useFormik({
       initialValues: {
-        email: '',
-        password: '',
+        email: 'kalsariyapiyush95@gmail.com',
+        password: '123456',
       },
 
       validationSchema: yup.object({
@@ -35,7 +47,9 @@ const Login = () => {
         LoginHandler(value)
           .then(async (res) => {
             if (res.data && res.data._id && typeof window !== undefined) {
-              localStorage.setItem('token', res.data.token);
+              setCookie('accessToken', res.data.token, {
+                maxAge: 72 * 60 * 60 * 1000,
+              });
               getUser();
               router.push('/');
               setIsLoading(false);

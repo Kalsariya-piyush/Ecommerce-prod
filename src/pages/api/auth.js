@@ -1,4 +1,4 @@
-import { getCookie } from '@/constants';
+import { token } from '@/constants';
 import axios from 'axios';
 
 export const signUpHanlder = async (data) => {
@@ -42,7 +42,7 @@ export const getCurrentUser = async () => {
     `${process.env.NEXT_PUBLIC_API_ENDPOINT}/user`,
     {
       headers: {
-        Authorization: `Bearer ${getCookie()}`,
+        Authorization: `Bearer ${token()}`,
         'Content-Type': 'application/json',
       },
     },
@@ -59,7 +59,7 @@ export const logOutHandler = async () => {
     `${process.env.NEXT_PUBLIC_API_ENDPOINT}/logout`,
     {
       headers: {
-        Authorization: `Bearer ${getCookie()}`,
+        Authorization: `Bearer ${token()}`,
         'Content-Type': 'application/json',
       },
     },

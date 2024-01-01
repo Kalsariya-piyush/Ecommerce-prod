@@ -14,7 +14,7 @@ const OrdersPage = () => {
 
   useEffect(() => {
     if (!currentUser && !isLoadingUser) {
-      router.push('/sign-in');
+      router.push('/login');
     }
   }, [currentUser, isLoadingUser]);
 

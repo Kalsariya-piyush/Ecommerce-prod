@@ -12,7 +12,7 @@ const AddProduct = () => {
   useEffect(() => {
     if (!isLoadingUser) {
       if (!currentUser) {
-        router.push('/sign-in');
+        router.push('/login');
       }
       if (currentUser?.role !== 'admin') {
         router.push('/');

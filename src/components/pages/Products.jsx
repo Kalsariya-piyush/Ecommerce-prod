@@ -64,7 +64,7 @@ const Products = () => {
         }
       }
     } else {
-      router.push('sign-in');
+      router.push('/login');
     }
   };
 

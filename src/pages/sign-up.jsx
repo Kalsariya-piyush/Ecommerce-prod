@@ -42,7 +42,7 @@ const Signup = () => {
               toast.error(res.message);
               return;
             }
-            router.push('/sign-in');
+            router.push('/login');
           })
           .catch((e) => {
             console.log('eerror >> ', e);
@@ -185,7 +185,7 @@ const Signup = () => {
 
               <p className="text-sm group mt-4 font-medium">
                 Already have an account?
-                <Link className="group-hover:underline" href="/sign-in">
+                <Link className="group-hover:underline" href="/login">
                   {' '}
                   sing-in
                 </Link>

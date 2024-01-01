@@ -20,18 +20,26 @@ const LoginHandler = async (data) => {
 };
 
 const GetCurrentUser = async () => {
+  return await axios.get(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/user/me`, {
+    headers: {
+      Authorization: `Bearer ${token()}`,
+      'Content-Type': 'application/json',
+    },
+    withCredentials: true,
+  });
+};
+
+const HandleLogout = async () => {
   return await axios.get(
-    `${process.env.NEXT_PUBLIC_API_ENDPOINT}/user/me`,
+    `${process.env.NEXT_PUBLIC_API_ENDPOINT}/user/logout`,
     {
       headers: {
         Authorization: `Bearer ${token()}`,
         'Content-Type': 'application/json',
       },
-    },
-    {
       withCredentials: true,
     }
   );
 };
 
-export { GetCurrentUser, LoginHandler };
+export { GetCurrentUser, HandleLogout, LoginHandler };
