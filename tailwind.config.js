@@ -65,6 +65,9 @@ module.exports = {
         primary: {
           500: '#FA8232',
         },
+        error: {
+          100: '#d32f2f',
+        },
       },
       lineHeight: {
         130: '130%',

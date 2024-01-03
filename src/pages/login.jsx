@@ -17,7 +17,7 @@ const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const setCookie = (name, value, options = {}) => {
+  const HandleSetCookie = (name, value, options = {}) => {
     let cookieString = `${encodeURIComponent(name)}=${encodeURIComponent(
       value
     )}`;
@@ -32,12 +32,15 @@ const Login = () => {
   const { handleBlur, handleChange, handleSubmit, errors, touched, values } =
     useFormik({
       initialValues: {
-        email: 'kalsariyapiyush95@gmail.com',
-        password: '123456',
+        email: '',
+        password: '',
       },
 
       validationSchema: yup.object({
-        email: yup.string().email('Invalid email').required('Required'),
+        email: yup
+          .string()
+          .email('Please Enter valid email address')
+          .required('Required'),
         password: yup.string().required('Required'),
       }),
 
@@ -47,9 +50,7 @@ const Login = () => {
         LoginHandler(value)
           .then(async (res) => {
             if (res.data && res.data._id && typeof window !== undefined) {
-              setCookie('accessToken', res.data.token, {
-                maxAge: 72 * 60 * 60 * 1000,
-              });
+              HandleSetCookie('accessToken', res.data.token);
               getUser();
               router.push('/');
               setIsLoading(false);
@@ -122,7 +123,7 @@ const Login = () => {
                 />
 
                 {errors.email && touched.email && (
-                  <p className="!my-1 absolute -bottom-6 right-0 text-end text-xs font-medium text-red-700">
+                  <p className="!my-1 absolute -bottom-6 right-0 text-end text-xs font-bold text-error-100">
                     {errors.email}
                   </p>
                 )}
@@ -145,7 +146,7 @@ const Login = () => {
                 />
 
                 {errors.password && touched.password && (
-                  <p className="!my-1 absolute -bottom-6 right-0 text-end text-xs font-medium text-red-700">
+                  <p className="!my-1 absolute -bottom-6 right-0 text-end text-xs font-bold text-error-100">
                     {errors.password}
                   </p>
                 )}
@@ -153,7 +154,7 @@ const Login = () => {
 
               <Button
                 type="submit"
-                className="!w-full !font-public-sans !text-base !font-semibold !leading-140 !rounded !bg-primary-500 !text-white !py-4 !hover:bg-primary-500/90"
+                className="!w-full !py-3 !font-public-sans !text-base !font-semibold !leading-140 !rounded !bg-primary-500 !text-white !hover:bg-primary-500/90"
               >
                 Sign In
               </Button>

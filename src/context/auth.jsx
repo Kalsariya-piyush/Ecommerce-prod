@@ -24,11 +24,16 @@ export const AuthProvider = ({ children }) => {
       });
   };
 
+  const deleteCookie = (cookieName) => {
+    document.cookie =
+      cookieName + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+  };
+
   const LogoutHandler = () => {
     HandleLogout()
       .then(() => {
+        deleteCookie('accessToken');
         setCurrentUser(null);
-        document.cookie = 'accessToken=; Max-Age=0';
         // router.push('/login');
       })
       .catch((error) => {

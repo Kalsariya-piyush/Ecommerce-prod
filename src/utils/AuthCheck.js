@@ -5,7 +5,7 @@ const jwtSecret = 'abcsefghiasdbkbajskdbasnndlkbvdnbmxnhlakjsmhdkbm';
 
 export const IsAuthenticated = async (ctx) => {
   const cookies = nookies.get(ctx);
-  const jwtToken = cookies.refreshToken;
+  const jwtToken = cookies.accessToken;
 
   if (jwtToken) {
     const claims = jwt.verify(jwtToken, jwtSecret);
@@ -32,7 +32,7 @@ export const IsAuthenticated = async (ctx) => {
 
 export const AuthCheck = async (ctx) => {
   const cookies = nookies.get(ctx);
-  const jwtToken = cookies.refreshToken;
+  const jwtToken = cookies.accessToken;
 
   if (jwtToken) {
     const claims = jwt.verify(jwtToken, jwtSecret);
