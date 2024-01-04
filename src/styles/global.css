@@ -163,6 +163,11 @@ body {
   @apply text-base-75 text-xs font-bold leading-130
 }
 
+/* Toastify  */
+.Toastify__toast-icon.Toastify--animate-icon.Toastify__zoom-enter {
+  @apply !mt-0.5
+}
+
 .discount-sec {
   background-image: url("../img/discount.jpeg");
   background-size: cover;

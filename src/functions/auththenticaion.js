@@ -1,6 +1,28 @@
 import { token } from '@/constants';
 import axios from 'axios';
 
+const SignUpHandler = async (data) => {
+  const body = {
+    email: data.email,
+    password: data.password,
+    firstname: data.firstName,
+    lastname: data.lastName,
+    mobile: data.mobileNo,
+    address: data.address,
+  };
+
+  return await axios.post(
+    `${process.env.NEXT_PUBLIC_API_ENDPOINT}/user/register`,
+    body,
+    {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      withCredentials: true,
+    }
+  );
+};
+
 const LoginHandler = async (data) => {
   const body = {
     email: data.email,
@@ -42,4 +64,4 @@ const HandleLogout = async () => {
   );
 };
 
-export { GetCurrentUser, HandleLogout, LoginHandler };
+export { GetCurrentUser, HandleLogout, LoginHandler, SignUpHandler };

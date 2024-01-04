@@ -32,10 +32,13 @@ const MyApp = ({ Component, pageProps }) => {
       {loading && <Loader />}
       <ThemeProvider>
         <ToastContainer
-          theme="dark"
-          position="top-center"
+          theme="light"
+          position="top-right"
           hideProgressBar
           autoClose={2000}
+          closeOnClick
+          bodyClassName={'flex items-start p-1'}
+          closeButton={false}
         />
         <Component {...pageProps} />
       </ThemeProvider>
