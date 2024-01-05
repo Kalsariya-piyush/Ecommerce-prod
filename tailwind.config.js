@@ -48,7 +48,7 @@ module.exports = {
           300: '#90cdf4',
           400: '#63b3ed',
           500: '#4299e1',
-          600: '#3182ce',
+          600: '#5F6C72',
           700: '#2b6cb0',
           800: '#2c5282',
           900: '#2a4365',
@@ -65,6 +65,9 @@ module.exports = {
         primary: {
           500: '#FA8232',
         },
+        secondary: {
+          500: '#2DA5F3',
+        },
         error: {
           100: '#d32f2f',
         },
@@ -78,6 +81,7 @@ module.exports = {
       },
       maxWidth: {
         '340px': '340px',
+        '360px': '360px',
       },
       spacing: {
         4.5: '18px',

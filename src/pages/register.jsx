@@ -1,12 +1,13 @@
 import { InputField } from '@/components/InputField';
 import Loader from '@/components/Loaders/Loader';
+import { getCharacterValidationError } from '@/constants';
 import { SignUpHandler } from '@/functions/auththenticaion';
 import { AuthCheck } from '@/utils/AuthCheck';
 import { Button } from '@mui/material';
 import { useFormik } from 'formik';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import { toast } from 'react-toastify';
 import * as yup from 'yup';
 
@@ -14,10 +15,6 @@ const Register = () => {
   const router = useRouter();
 
   const [isLoading, setIsLoading] = useState(false);
-
-  const getCharacterValidationError = (str) => {
-    return `Your password must have at least 1 ${str} character`;
-  };
 
   const { handleBlur, handleChange, handleSubmit, errors, touched, values } =
     useFormik({
@@ -39,7 +36,7 @@ const Register = () => {
           .positive('Please Enter a valid mobile number')
           .integer('Please Enter a valid mobile number')
           .min(10)
-          .required('Please enter a mmobile number'),
+          .required('Please enter a mobile number'),
         email: yup
           .string()
           .email('Please Enter valid email address')
@@ -81,7 +78,7 @@ const Register = () => {
     });
 
   return (
-    <div className="w-full -min-h-screen px-5 flex py-11 justify-center items-center">
+    <div className="w-full h-full min-h-screen p-5 flex justify-center items-center">
       {isLoading && <Loader />}
 
       <div className="w-full max-w-lg flex flex-col gap-3">
@@ -132,6 +129,7 @@ const Register = () => {
                 handleBlur={handleBlur}
                 value={values.firstName}
                 errorMessage={errors.firstName}
+                wrapperClassName={'md:col-span-1 col-span-2'}
               />
 
               <InputField
@@ -144,6 +142,7 @@ const Register = () => {
                 handleBlur={handleBlur}
                 value={values.lastName}
                 errorMessage={errors.lastName}
+                wrapperClassName={'md:col-span-1 col-span-2'}
               />
 
               <InputField
@@ -222,6 +221,6 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default memo(Register);
 
 export const getServerSideProps = AuthCheck;

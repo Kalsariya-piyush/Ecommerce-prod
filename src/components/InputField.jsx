@@ -37,10 +37,11 @@ const InputField = ({
         multiline={isMultiline || false}
         maxRows={maxRows}
         minRows={minRows}
+        fullWidth
       />
 
       {isError && (
-        <p className="!my-1 absolute -bottom-6 right-0 text-end text-xs font-bold text-error-100">
+        <p className="!my-1 absolute -bottom-6 right-0 text-end text-xs font-medium text-error-100">
           {errorMessage}
         </p>
       )}
