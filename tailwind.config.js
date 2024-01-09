@@ -68,6 +68,7 @@ module.exports = {
         secondary: {
           500: '#2DA5F3',
           600: '#2484C2',
+          700: '#1B6392',
         },
         error: {
           100: '#d32f2f',
@@ -91,6 +92,8 @@ module.exports = {
       },
       boxShadow: {
         primary: '0px 8px 40px 0px rgba(0, 0, 0, 0.12)',
+        secondary: '0px -1px 0px 0px rgba(255, 255, 255, 0.16) inset',
+        base: '0px -1px 0px 0px #E4E7E9 inset',
       },
     },
   },

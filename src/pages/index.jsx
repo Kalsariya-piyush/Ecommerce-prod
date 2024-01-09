@@ -19,7 +19,7 @@ import Layout from '../layouts/Layout';
 const Index = () => {
   return (
     <Layout className="my-6">
-      <div className="grid gap-6 grid-cols-12 w-full h-[calc(100vh-210px)]">
+      <div className="grid gap-6 grid-cols-12 w-full h-full">
         <div className="w-full flex justify-center items-center col-span-8 p-14 h-full bg-gray-50 rounded-md">
           <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
