@@ -82,7 +82,7 @@ const Register = () => {
       {isLoading && <Loader />}
 
       <div className="w-full max-w-lg flex flex-col gap-3">
-        <div className="rounded bg-white w-full border border-gray-100">
+        <div className="rounded bg-white shadow-primary w-full border border-gray-100">
           <div className="w-full flex justify-between">
             <Link href="/login" className="w-full">
               <Button

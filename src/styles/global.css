@@ -8,7 +8,7 @@
 @tailwind utilities;
 
 body {
-  @apply !m-0 !p-0 !box-border bg-gray-100 font-public-sans
+  @apply !m-0 !p-0 !box-border !bg-white font-public-sans
 }
 
 /* scrollbar css  */
@@ -104,54 +104,34 @@ body {
   --swiper-navigation-size: 20px;
 }
 
-.swiper-scrollbar-drag {
-  width: 100%;
-  position: relative;
-  background: var(--swiper-scrollbar-drag-bg-color, rgba(0, 0, 0, 0.5));
-  border-radius: var(--swiper-scrollbar-border-radius, 10px);
-  left: 0;
-  top: 0;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  position: absolute;
-  top: var(--swiper-navigation-top-offset, 50%);
-  width: calc(var(--swiper-navigation-size) / 44 * 27);
-  height: var(--swiper-navigation-size);
-  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
-  z-index: 10;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--swiper-navigation-color, var(--swiper-theme-color));
-}
-
 body {
   @apply !m-0 !p-0 !box-border bg-gray-100;
 }
 
 /* Swiper  */
 .swiper-button-prev {
-  @apply pl-32
+  @apply -ml-3 opacity-5
 }
 
 .swiper-button-next {
-  @apply pr-32
+  @apply -mr-3 opacity-5
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  @apply text-gray-500
+  @apply text-gray-700
 }
 
 .swiper-pagination-bullet {
-  @apply !w-8 !h-1 !rounded-none
+  @apply !w-2.5 !h-2.5 !rounded-full
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  @apply !w-auto !bottom-0 !left-0
 }
 
 .swiper-pagination-bullet-active {
-  @apply !bg-black
+  @apply !bg-gray-900
 }
 
 /* Mui css overwrite  */

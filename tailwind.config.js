@@ -30,14 +30,14 @@ module.exports = {
     extend: {
       colors: {
         gray: {
-          50: '#F2F4FF',
+          50: '#F2F4F5',
           100: '#E4E7E9',
           200: '#edf2f7',
           300: '#e2e8f0',
           400: '#cbd5e0',
           500: '#77878F',
           600: '#718096',
-          700: '#4a5568',
+          700: '#475156',
           800: '#2d3748',
           900: '#191C1F',
         },
@@ -67,12 +67,14 @@ module.exports = {
         },
         secondary: {
           500: '#2DA5F3',
+          600: '#2484C2',
         },
         error: {
           100: '#d32f2f',
         },
       },
       lineHeight: {
+        56: '56px',
         130: '130%',
         140: '140%',
       },
@@ -81,10 +83,14 @@ module.exports = {
       },
       maxWidth: {
         '340px': '340px',
+        '356px': '356px',
         '360px': '360px',
       },
       spacing: {
         4.5: '18px',
+      },
+      boxShadow: {
+        primary: '0px 8px 40px 0px rgba(0, 0, 0, 0.12)',
       },
     },
   },

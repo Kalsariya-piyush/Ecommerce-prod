@@ -59,7 +59,7 @@ const Login = () => {
       {isLoading && <Loader />}
 
       <div className="w-full max-w-lg flex flex-col gap-3">
-        <div className="rounded bg-white w-full border border-gray-100">
+        <div className="rounded bg-white w-full border border-gray-100 shadow-primary">
           <div className="w-full flex justify-between">
             <Link href="/login" className="w-full">
               <Button
@@ -94,7 +94,9 @@ const Login = () => {
           >
             <fieldset
               disabled={isLoading}
-              className={`flex flex-col ${errors.email ? 'gap-7' : 'gap-3'}`}
+              className={`flex flex-col ${
+                errors.email && touched.email ? 'gap-7' : 'gap-3'
+              }`}
             >
               <InputField
                 id="email"
