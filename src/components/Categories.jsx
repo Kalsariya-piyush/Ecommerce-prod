@@ -26,8 +26,8 @@ const Categories = ({
               key={id}
               onClick={() => handleChangeCategory(title)}
               className={`${
-                selectedCategory === title ? 'text-black' : 'text-gray-600'
-              } text-sm py-2 leading-5 font-normal`}
+                selectedCategory === title ? '!text-black' : '!text-gray-600'
+              } !text-sm !py-2 !leading-5 !font-normal`}
             >
               {title}
             </MenuItem>
