@@ -1,33 +1,30 @@
-import PageInitialLoader from '@/components/Loaders/PageLoader';
 import ProductForm from '@/components/pages/ProductForm';
-import { useAuth } from '@/context/auth';
 import Layout from '@/layouts/Layout';
 import { IsAuthenticated } from '@/utils/AuthCheck';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
 
 const AddProduct = () => {
-  const router = useRouter();
+  // const router = useRouter();
 
-  const { currentUser, isLoadingUser } = useAuth();
+  // const { currentUser, isLoadingUser } = useAuth();
 
-  useEffect(() => {
-    if (!isLoadingUser) {
-      if (!currentUser) {
-        router.push('/login');
-      }
+  // useEffect(() => {
+  //   if (!isLoadingUser) {
+  //     if (!currentUser) {
+  //       router.push('/login');
+  //     }
 
-      if (currentUser?.role !== 'admin') {
-        router.push('/');
-      }
-    }
-  }, [currentUser, isLoadingUser]);
+  //     if (currentUser?.role !== 'admin') {
+  //       router.push('/');
+  //     }
+  //   }
+  // }, [currentUser, isLoadingUser]);
 
   return (
     <Layout>
-      {isLoadingUser && <PageInitialLoader />}
+      {/* {isLoadingUser && <PageInitialLoader />} */}
 
-      {currentUser && !isLoadingUser && <ProductForm />}
+      {/* {currentUser && !isLoadingUser && <ProductForm />} */}
+      <ProductForm />
     </Layout>
   );
 };

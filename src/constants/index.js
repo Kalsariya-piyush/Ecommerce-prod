@@ -7,6 +7,12 @@ const token = () => {
 const HandleSetCookie = (name, value, options = {}) => {
   let cookieString = `${encodeURIComponent(name)}=${encodeURIComponent(value)}`;
 
+  // Set the expiration time to 24 hours
+  const expirationDate = new Date();
+  expirationDate.setTime(expirationDate.getTime() + 24 * 60 * 60 * 1000); // 24 hours in milliseconds
+
+  options.expires = expirationDate.toUTCString();
+
   for (const option in options) {
     cookieString += `; ${option}=${options[option]}`;
   }

@@ -119,7 +119,7 @@ body {
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  @apply text-gray-700 !hidden
+  @apply text-gray-700 sm:hidden
 }
 
 .swiper-pagination-bullet {
@@ -127,7 +127,7 @@ body {
 }
 
 .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
-  @apply !w-auto !bottom-0 !left-0
+  @apply !w-auto bottom-0 left-0 hidden sm:block
 }
 
 .swiper-pagination-bullet-active {

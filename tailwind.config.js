@@ -73,6 +73,13 @@ module.exports = {
         error: {
           100: '#d32f2f',
         },
+        warning: {
+          400: '#EFD33D',
+          500: '#EBC80C',
+        },
+        medium: {
+          600: '#141414',
+        },
       },
       lineHeight: {
         56: '56px',

@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>undefined/</loc><lastmod>2023-11-28T18:44:19.394Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>undefined/add-product/</loc><lastmod>2023-11-28T18:44:19.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>undefined/admin/</loc><lastmod>2023-11-28T18:44:19.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>undefined/cart/</loc><lastmod>2023-11-28T18:44:19.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>undefined/dashboard/</loc><lastmod>2023-11-28T18:44:19.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>undefined/dashboard/add-product/</loc><lastmod>2023-11-28T18:44:19.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>undefined/dashboard/payments/</loc><lastmod>2023-11-28T18:44:19.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>undefined/dashboard/products/</loc><lastmod>2023-11-28T18:44:19.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>undefined/dashboard/profile/</loc><lastmod>2023-11-28T18:44:19.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>undefined/dashboard/users/</loc><lastmod>2023-11-28T18:44:19.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>undefined/orders/</loc><lastmod>2023-11-28T18:44:19.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>undefined/products/</loc><lastmod>2023-11-28T18:44:19.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>undefined/profile/</loc><lastmod>2023-11-28T18:44:19.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>undefined/sign-in/</loc><lastmod>2023-11-28T18:44:19.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>undefined/sign-up/</loc><lastmod>2023-11-28T18:44:19.395Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>undefined/</loc><lastmod>2024-01-16T18:46:20.640Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>undefined/add-product/</loc><lastmod>2024-01-16T18:46:20.641Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>undefined/admin/</loc><lastmod>2024-01-16T18:46:20.641Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>undefined/cart/</loc><lastmod>2024-01-16T18:46:20.641Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>undefined/dashboard/</loc><lastmod>2024-01-16T18:46:20.641Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>undefined/dashboard/add-product/</loc><lastmod>2024-01-16T18:46:20.641Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>undefined/dashboard/payments/</loc><lastmod>2024-01-16T18:46:20.641Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>undefined/dashboard/products/</loc><lastmod>2024-01-16T18:46:20.641Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>undefined/dashboard/profile/</loc><lastmod>2024-01-16T18:46:20.641Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>undefined/dashboard/users/</loc><lastmod>2024-01-16T18:46:20.641Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>undefined/forgot-password/</loc><lastmod>2024-01-16T18:46:20.641Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>undefined/login/</loc><lastmod>2024-01-16T18:46:20.641Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>undefined/orders/</loc><lastmod>2024-01-16T18:46:20.641Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>undefined/products/</loc><lastmod>2024-01-16T18:46:20.641Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>undefined/profile/</loc><lastmod>2024-01-16T18:46:20.641Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>undefined/register/</loc><lastmod>2024-01-16T18:46:20.641Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>undefined/reset-password/</loc><lastmod>2024-01-16T18:46:20.641Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>undefined/sign-in-OLD/</loc><lastmod>2024-01-16T18:46:20.641Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>undefined/sign-up/</loc><lastmod>2024-01-16T18:46:20.641Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

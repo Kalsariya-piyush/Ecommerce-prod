@@ -1,11 +1,10 @@
 const Logo = () => {
   return (
     <svg
-      width="177"
-      height="48"
       viewBox="0 0 177 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="lg:w-[177px] lg:h-[48px] w-36 h-10"
     >
       <path
         fillRule="evenodd"
