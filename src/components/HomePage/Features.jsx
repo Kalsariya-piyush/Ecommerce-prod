@@ -33,6 +33,8 @@ const FEATURES = [
 const Features = () => {
   return (
     <div className="lg:p-4 mb-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:border border-gray-100 rounded-md">
+      
+
       {FEATURES.map(({ desc, heading, icon, id }) => (
         <div
           key={id}

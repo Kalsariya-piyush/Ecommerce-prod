@@ -1,34 +1,52 @@
-import ExlamationIcon from '@/components/Icons/ExclamationIcon';
-import LeftArrowIcon from '@/components/Icons/LeftArrowIcon';
 import Link from 'next/link';
 
-const Page404 = () => {
-  return (
-    <section className="bg-gray-900 ">
-      <div className="container flex items-center min-h-screen px-6 py-12 mx-auto">
-        <div className="flex flex-col items-center max-w-sm mx-auto text-center">
-          <p className="p-3 text-sm font-medium text-blue-600 rounded-full bg-blue-50 dark:bg-gray-800">
-            <ExlamationIcon />
-          </p>
-          <h1 className="mt-3 text-2xl font-semibold text-white md:text-3xl">
-            Page not found
-          </h1>
-          <p className="mt-4 text-gray-400">
-            The page you are looking for doesn't exist.
-          </p>
+import HomeIcon from '@/components/Icons/HomeIcon';
+import LeftArrowIcon from '@/components/Icons/LeftArrowIcon';
 
-          <Link href="/">
-            <button className="group flex w-full gap-3 mt-5 !items-center justify-between rounded-lg bg-black !px-4 !py-2 text-base font-medium text-white disabled:cursor-not-allowed sm:w-auto">
+const NotFoundPage = () => {
+  return (
+    <div className="max-w-7xl mx-auto text-gray-900">
+      <div className="flex flex-col justify-center items-center h-[90vh]">
+        <img
+          src="/assets/images/404png.png"
+          alt="404png_image"
+          className="lg:w-[500px] w-[300px]"
+        />
+
+        <div className="flex flex-col gap-y-4 text-center xs:mx-0 mx-3">
+          <h1 className="font-semibold lg:text-4xl sm:text-3xl text-xl">
+            404, Page not founds
+          </h1>
+          <div className="text-gray-700">
+            <p>
+              Something went wrong. It’s look that your requested could not be
+              found.
+            </p>
+            <p> It’s look like the link is broken or the page is removed.</p>
+          </div>
+
+          <div className="flex gap-x-3 mx-auto">
+            <button className="group uppercase rounded-sm sm:px-4 px-2 text-sm text-white top-3 right-4 flex items-center gap-x-2 font-semibold leading-10 bg-primary-500">
               <span className="group-hover:-translate-x-1 translate-x-1 duration-200">
                 <LeftArrowIcon />
               </span>
-              <span>Go Home</span>
+              <span>Go Back</span>
             </button>
-          </Link>
+
+            <Link
+              href="/"
+              className="border text-sm font-semibold border-primary-100 p-2 flex items-center gap-x-1 sm:px-4 px-2 text-primary-500 uppercase"
+            >
+              <span>
+                <HomeIcon />
+              </span>
+              <span>Go To Home</span>
+            </Link>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default Page404;
+export default NotFoundPage;

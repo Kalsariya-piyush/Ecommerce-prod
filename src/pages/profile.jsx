@@ -59,7 +59,7 @@ const ProfilePage = () => {
               <div className="profile-head">
                 <div className="flex items-center">
                   <img
-                    src="assets/images/pic.png"
+                    src="/assets/images/pic.png"
                     alt=""
                     className="w-[50px] h-[50px] rounded-[50%]"
                   />

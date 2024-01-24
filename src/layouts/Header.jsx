@@ -1,5 +1,6 @@
 import Categories from '@/components/Categories';
 import CallIcon from '@/components/Icons/CallIcon';
+import CallIcon2 from '@/components/Icons/CallIcon2';
 import CartIcon from '@/components/Icons/CartIcon';
 import CloseIcon from '@/components/Icons/CloseIcon';
 import HeadPhoneIcon from '@/components/Icons/HeadPhoneIcon';
@@ -290,7 +291,7 @@ const Header = () => {
               href="tel:+91 9510449518"
               className="text-lg text-gray-900 leading-6 flex gap-2 items-center font-normal"
             >
-              <CallIcon />
+              <CallIcon2 />
               <p className="lg:block hidden">+91 9510449518</p>
             </a>
           </div>

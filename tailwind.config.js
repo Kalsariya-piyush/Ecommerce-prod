@@ -5,6 +5,7 @@ module.exports = {
   theme: {
     screens: {
       xs: '425px',
+      smz: '500px',
       sm: '640px',
       md: '768px',
       lg: '1024px',
@@ -36,7 +37,7 @@ module.exports = {
           300: '#e2e8f0',
           400: '#cbd5e0',
           500: '#77878F',
-          600: '#718096',
+          600: '#5F6C72',
           700: '#475156',
           800: '#2d3748',
           900: '#191C1F',
@@ -48,7 +49,6 @@ module.exports = {
           300: '#90cdf4',
           400: '#63b3ed',
           500: '#4299e1',
-          600: '#5F6C72',
           700: '#2b6cb0',
           800: '#2c5282',
           900: '#2a4365',
@@ -63,6 +63,7 @@ module.exports = {
           100: '#4CE13F',
         },
         primary: {
+          100: '#FFE7D6',
           500: '#FA8232',
         },
         secondary: {
@@ -72,6 +73,9 @@ module.exports = {
         },
         error: {
           100: '#d32f2f',
+        },
+        succes: {
+          500: '#2DB224',
         },
         warning: {
           400: '#EFD33D',
