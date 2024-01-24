@@ -1,7 +1,7 @@
 import { token } from '@/constants';
 import axios from 'axios';
 
-export const signUpHanlder = async (data) => {
+const signUpHanlder = async (data) => {
   const body = {
     email: data.email,
     password: data.password,
@@ -17,7 +17,7 @@ export const signUpHanlder = async (data) => {
   return res.data;
 };
 
-export const signInHanlder = async (data) => {
+const signInHanlder = async (data) => {
   const body = {
     email: data.email,
     password: data.password,
@@ -37,7 +37,7 @@ export const signInHanlder = async (data) => {
   return res.data;
 };
 
-export const getCurrentUser = async () => {
+const getCurrentUser = async () => {
   const res = await axios.get(
     `${process.env.NEXT_PUBLIC_API_ENDPOINT}/user`,
     {
@@ -54,7 +54,7 @@ export const getCurrentUser = async () => {
   return res;
 };
 
-export const logOutHandler = async () => {
+const logOutHandler = async () => {
   const res = await axios.get(
     `${process.env.NEXT_PUBLIC_API_ENDPOINT}/logout`,
     {
@@ -69,4 +69,51 @@ export const logOutHandler = async () => {
   );
 
   return res;
+};
+
+const forgotPasswordHandler = async (email) => {
+  const body = {
+    email,
+  };
+
+  const res = await axios.post(
+    `${process.env.NEXT_PUBLIC_API_ENDPOINT}/user/forgot-password-token`,
+    body,
+    {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      withCredentials: true,
+    }
+  );
+
+  return res;
+};
+
+const resetPasswordHandler = async (hash, password) => {
+  const body = {
+    password,
+  };
+
+  const res = await axios.put(
+    `${process.env.NEXT_PUBLIC_API_ENDPOINT}/user/reset-password/${hash}`,
+    body,
+    {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      withCredentials: true,
+    }
+  );
+
+  return res;
+};
+
+export {
+  forgotPasswordHandler,
+  getCurrentUser,
+  logOutHandler,
+  resetPasswordHandler,
+  signInHanlder,
+  signUpHanlder,
 };

@@ -51,10 +51,10 @@ const Register = () => {
         address: yup.string().required('Please enter a address'),
       }),
 
-      onSubmit: async (value) => {
+      onSubmit: (value) => {
         setIsLoading(true);
 
-        await SignUpHandler(value)
+        SignUpHandler(value)
           .then((res) => {
             console.log('res?.data? ', res?.data?._id);
             if (res?.data && res?.data?._id && typeof window !== undefined) {

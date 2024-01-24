@@ -34,10 +34,10 @@ const Login = () => {
         password: yup.string().required('Please enter a password'),
       }),
 
-      onSubmit: async (value) => {
+      onSubmit: (value) => {
         setIsLoading(true);
         LoginHandler(value)
-          .then(async (res) => {
+          .then((res) => {
             if (res?.data && res?.data?._id && typeof window !== undefined) {
               HandleSetCookie('accessToken', res.data.token);
               getUser();
