@@ -23,7 +23,7 @@ const Main = ({ meta, children, className }) => {
       >
         <div
           className={`w-full min-h-[calc(100vh-260px)] ${
-            router?.asPath?.includes('dashboard') && 'py-10'
+            router?.asPath?.includes('dashboard') && 'py-10 flex gap-[72px]'
           } `}
         >
           {router?.asPath?.includes('dashboard') && <SideBar />}

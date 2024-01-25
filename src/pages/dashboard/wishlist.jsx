@@ -3,25 +3,10 @@ import Layout from '@/layouts/Layout';
 import { IsAuthenticated } from '@/utils/AuthCheck';
 
 const Wishlist = () => {
-  // const router = useRouter();
-
-  // const { currentUser, isLoadingUser } = useAuth();
-
-  // useEffect(() => {
-  //   if (!isLoadingUser) {
-  //     if (!currentUser) {
-  //       router.push('/login');
-  //     }
-
-  //     if (currentUser?.role !== 'admin') {
-  //       router.push('/');
-  //     }
-  //   }
-  // }, [currentUser, isLoadingUser]);
 
   return (
     <Layout>
-      <ProductForm />
+      Wishlist
     </Layout>
   );
 };
