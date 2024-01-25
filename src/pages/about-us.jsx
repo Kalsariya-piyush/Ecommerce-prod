@@ -3,6 +3,7 @@ import { useState } from 'react';
 import GreenTick from '@/components/Icons/GreenTick';
 import PlayIcon from '@/components/Icons/PlayIcon';
 import RightArrowIcon from '@/components/Icons/RightArrowIcon';
+import Layout from '@/layouts/Layout';
 
 const TEAM_MEMBERS = [
   {
@@ -86,19 +87,22 @@ const AboutUs = () => {
     e.preventDefault();
     console.log('Searchdata  >> ', searchQuery);
   };
+
   return (
-    <>
+    <Layout>
       <div className="my-20 text-gray-900">
         <div className="max-w-7xl mx-auto">
           <div className="flex lg:flex-row flex-col items-center lg:justify-between justify-start xl:mx-0 mx-3">
-            <div className="lg:w-1/2 smz:w-[500px] w-auto   order-2 lg:order-1">
-              <button className="bg-secondary-500 px-4 py-2 rounded-sm my-2 lg:mt-0 mt-4 text-white font-semibold">
+            <div className="lg:w-1/2 sm:w-[500px] w-auto order-2 lg:order-1">
+              <p className="bg-secondary-500 px-4 py-2 rounded-sm my-2 lg:mt-0 mt-4 text-white font-semibold">
                 WHO WE ARE
-              </button>
+              </p>
+
               <div className="flex flex-col lg:gap-y-5 gap-y-4">
                 <h1 className="lg:text-[40px] text-3xl font-semibold lg:leading-56 leading-10">
                   Kinbo - largest electronics retail shop in the world.
                 </h1>
+
                 <p className="text-disabled-500">
                   Pellentesque ultrices, dui vel hendrerit iaculis, ipsum velit
                   vestibulum risus, ac tincidunt diam lectus id magna. Praesent
@@ -106,7 +110,8 @@ const AboutUs = () => {
                   a dui aliquet, non ultricies nibh elementum. Nulla ac nulla
                   dolor.{' '}
                 </p>
-                <div className="">
+
+                <div>
                   <span className="flex gap-x-2 text-base">
                     <GreenTick />
                     Great 24/7 customer services.
@@ -164,30 +169,28 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="">
-        <div
-          className="bg-cover bg-center w-full h-96"
-          style={{ backgroundImage: 'url("/assets/images/bg.jpeg")' }}
-        >
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col justify-center h-96">
-              <div className="leading-9">
-                <h1 className="text-3xl font-semibold">Your trusted and</h1>
-                <h1 className="text-3xl font-semibold">reliable retail shop</h1>
-              </div>
+      <div
+        className="bg-cover bg-center w-full h-96"
+        style={{ backgroundImage: 'url("/assets/images/bg.jpeg")' }}
+      >
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col justify-center h-96">
+            <div className="leading-9">
+              <h1 className="text-3xl font-semibold">Your trusted and</h1>
+              <h1 className="text-3xl font-semibold">reliable retail shop</h1>
+            </div>
 
-              <div className="my-3">
-                <p className="text-lg">
-                  Praesent sed semper metus. Nunc aliquet dolor
-                </p>
-                <p className="text-lg">
-                  mauris, et fringilla elit gravida eget. Nunc
-                </p>
-                <p className="text-lg">consequat auctor urna a placerat.</p>
-              </div>
-              <div className="w-6 h-6 bg-primary-500 p-6 flex items-center justify-center rounded-full">
-                <PlayIcon />
-              </div>
+            <div className="my-3">
+              <p className="text-lg">
+                Praesent sed semper metus. Nunc aliquet dolor
+              </p>
+              <p className="text-lg">
+                mauris, et fringilla elit gravida eget. Nunc
+              </p>
+              <p className="text-lg">consequat auctor urna a placerat.</p>
+            </div>
+            <div className="w-6 h-6 bg-primary-500 p-6 flex items-center justify-center rounded-full">
+              <PlayIcon />
             </div>
           </div>
         </div>
@@ -196,7 +199,7 @@ const AboutUs = () => {
       <div className="my-16 text-gray-900">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  gap-5 xl:mx-0 mx-3">
-            <div className="">
+            <div>
               <h3 className="uppercase font-semibold py-3">FLASH SALE TODAY</h3>
               <div className="flex flex-col  justify-center gap-y-3 ">
                 {FLASH_SALES_PRODS.map(
@@ -219,7 +222,7 @@ const AboutUs = () => {
               </div>
             </div>
 
-            <div className="">
+            <div>
               <h3 className="uppercase font-semibold py-3">best sellers</h3>
               <div className="flex flex-col  justify-center gap-y-3 ">
                 {FLASH_SALES_PRODS.map(
@@ -242,7 +245,7 @@ const AboutUs = () => {
               </div>
             </div>
 
-            <div className="">
+            <div>
               <h3 className="uppercase font-semibold py-3">top rated</h3>
               <div className="flex flex-col  justify-center gap-y-3 ">
                 {FLASH_SALES_PRODS.map(
@@ -265,8 +268,9 @@ const AboutUs = () => {
               </div>
             </div>
 
-            <div className="">
+            <div>
               <h3 className="uppercase font-semibold py-3">new arrival</h3>
+
               <div className="flex flex-col  justify-center gap-y-3 ">
                 {FLASH_SALES_PRODS.map(
                   ({ image, product, model, price }, index) => (
@@ -321,31 +325,32 @@ const AboutUs = () => {
                     placeholder="Email address"
                     value={searchQuery}
                   />
-                  <button
+
+                  <Button
                     type="submit"
-                    className="uppercase rounded-sm px-4 text-white top-3 right-4  text-sm flex items-center gap-x-2 font-semibold leading-10 bg-primary-500"
+                    className="uppercase rounded-sm px-4 text-white text-sm flex items-center gap-x-2 font-semibold leading-10 hover:bg-primary-500 bg-primary-500"
                   >
                     subscribe <RightArrowIcon />
-                  </button>
+                  </Button>
                 </form>
               </div>
             </div>
 
             <div className="border-t-[1px] border-t-gray-600 w-80"></div>
 
-            <div className="">
+            <div>
               <div className="grid lg:grid-cols-5 sm:grid-cols-4 grid-cols-3 gap-x-10 gap-y-0">
-                <img src="/assets/companyLogo/google.png" alt="googleicon" />
-                <img src="/assets/companyLogo/amazon.png" alt="amazonicon" />
-                <img src="/assets/companyLogo/philips.png" alt="philipsicon" />
-                <img src="/assets/companyLogo/toshiba.png" alt="toshibaicon" />
-                <img src="/assets/companyLogo/samsung.png" alt="samsungicon" />
+                <img src="/assets/companyLogo/google.png" alt="google_icon" />
+                <img src="/assets/companyLogo/amazon.png" alt="amazon_icon" />
+                <img src="/assets/companyLogo/philips.png" alt="philips_icon" />
+                <img src="/assets/companyLogo/toshiba.png" alt="toshiba_icon" />
+                <img src="/assets/companyLogo/samsung.png" alt="samsung_icon" />
               </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </Layout>
   );
 };
 

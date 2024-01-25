@@ -84,6 +84,9 @@ module.exports = {
         medium: {
           600: '#141414',
         },
+        success: {
+          500: '#2DB224',
+        },
       },
       lineHeight: {
         56: '56px',
