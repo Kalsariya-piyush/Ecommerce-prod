@@ -53,7 +53,7 @@ const CATEGORIES = [
     id: 7,
     icon: <CardsAddressIcon />,
     title: "Cards & Address",
-    href: "/dashboard/cards-&-address",
+    href: "/dashboard/cards-and-address",
   },
   {
     id: 8,
@@ -91,10 +91,7 @@ export const SideBar = () => {
 
   console.log(
     "sssddd",
-    selectedCategory.toLocaleLowerCase(),
-    pathSegments[pathSegments.length - 1]
-      .replace("-", " " || "and", "&")
-      .toLocaleLowerCase()
+    pathSegments[pathSegments.length - 1].replaceAll("-", " ").toLocaleLowerCase().replace("and","&")
   );
   return (
     <div>
@@ -112,9 +109,7 @@ export const SideBar = () => {
                 onClick={() => handleChangeCategory(title, href)}
                 className={`!text-gray-600 ${
                   title.toLocaleLowerCase() ===
-                  pathSegments[pathSegments.length - 1]
-                    .replace("-", " ")
-                    .toLocaleLowerCase()
+                  pathSegments[pathSegments.length - 1].replaceAll("-", " ").toLocaleLowerCase().replace("and","&")
                     ? "!bg-primary-500 !text-white"
                     : "!bg-gray"
                 } !text-sm !py-2.5 !leading-5 !font-normal`}

@@ -8,6 +8,9 @@ const BreadcrumbsContainer = ({middleArray, lastPage}) => {
   const router = useRouter();
   const pathSegments = router.asPath.split('/').filter((segment) => segment !== '');
 
+
+  console.log(pathSegments.length);
+
   return (
     <div className="bg-gray-50 py-6">
       <div className="max-w-[1240px] mx-auto">
@@ -23,8 +26,8 @@ const BreadcrumbsContainer = ({middleArray, lastPage}) => {
           </Link>
           {pathSegments.map((segment, index) => (
             <span key={segment}>
-              <Link className={`${!index < pathSegments.length - 1 && "font-public-sans font-medium text-sm leading-5 text-secondary-500"} capitalize`} href={`/${pathSegments.slice(0, index + 1).join("/")}`}>
-                {segment.replace("-", " ")}
+              <Link className={`${pathSegments.length === 1 ? `font-public-sans font-medium text-sm leading-5 text-secondary-500`: `${!index < pathSegments.length - 1 && "font-public-sans font-medium text-sm leading-5 text-secondary-500"}`} capitalize`} href={`/${pathSegments.slice(0, index + 1).join("/")}`}>
+                {segment.replaceAll("-", " ")}
               </Link>
             </span>
           ))}

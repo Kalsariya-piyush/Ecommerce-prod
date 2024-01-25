@@ -4,7 +4,7 @@ import { IsAuthenticated } from '@/utils/AuthCheck';
 const Profile = () => {
   return (
     <Layout>
-      <h1 className="text-2xl font-semibold">Under contruction... </h1>
+      Profile
     </Layout>
   );
 };
