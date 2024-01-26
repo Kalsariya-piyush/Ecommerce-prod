@@ -1,8 +1,16 @@
-import Link from 'next/link';
-import HomeIcon from '@/components/Icons/HomeIcon';
-import { ArrowVectorIcon } from '@/components/Icons/ArrowVectorIcon';
-import { Breadcrumbs } from '@mui/material';
-const BreadcrumbsContainer = ({ middleArray, lastPage }) => {
+import Link from "next/link";
+import HomeIcon from "@/components/Icons/HomeIcon";
+import {ArrowVectorIcon} from "@/components/Icons/ArrowVectorIcon";
+import {Breadcrumbs} from "@mui/material";
+import { useRouter } from 'next/router';
+
+const BreadcrumbsContainer = ({middleArray, lastPage}) => {
+  const router = useRouter();
+  const pathSegments = router.asPath.split('/').filter((segment) => segment !== '');
+
+
+  console.log(pathSegments.length);
+
   return (
     <div className="bg-gray-50 py-6">
       <div className="max-w-[1240px] mx-auto">
@@ -14,20 +22,15 @@ const BreadcrumbsContainer = ({ middleArray, lastPage }) => {
             color="inherit"
             href="/"
           >
-            <HomeIcon fill={'#5F6C72'} /> Home
+            <HomeIcon fill={"#5F6C72"} /> Home
           </Link>
-          {middleArray.map((item) => (
-            <Link underline="hover" key="2" color="inherit" href={item?.href}>
-              {console.log(item?.name)}
-              {item?.name}
-            </Link>
+          {pathSegments.map((segment, index) => (
+            <span key={segment}>
+              <Link className={`${pathSegments.length === 1 ? `font-public-sans font-medium text-sm leading-5 text-secondary-500`: `${!index < pathSegments.length - 1 && "font-public-sans font-medium text-sm leading-5 text-secondary-500"}`} capitalize`} href={`/${pathSegments.slice(0, index + 1).join("/")}`}>
+                {segment.replaceAll("-", " ")}
+              </Link>
+            </span>
           ))}
-          <p
-            key="3"
-            className="font-public-sans font-medium text-sm leading-5 text-secondary-500"
-          >
-            {lastPage}
-          </p>
         </Breadcrumbs>
       </div>
     </div>
