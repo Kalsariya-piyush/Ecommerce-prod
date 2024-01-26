@@ -1,18 +1,18 @@
+import BreadcrumbsContainer from '@/components/BreadcrumbsContainer/BreadcrumbsContainer';
+import { SideBar } from '@/components/Dashboard/SideBar';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
-import BreadcrumbsContainer from '@/components/BreadcrumbsContainer/BreadcrumbsContainer';
 import { useRouter } from 'next/router';
-import { SideBar } from '@/components/Dashboard/SideBar';
 
 const Main = ({ meta, children, className }) => {
   const router = useRouter();
 
-  console.log('sas', router?.asPath);
   return (
     <>
       {meta}
 
       <Header />
+
       <BreadcrumbsContainer
         middleArray={[{ href: '/dashboard', name: 'Dashboard' }]}
         lastPage={'Cards & Address'}

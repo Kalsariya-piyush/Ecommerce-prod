@@ -1,5 +1,4 @@
 import Layout from '@/layouts/Layout';
-import { IsAuthenticated } from '@/utils/AuthCheck';
 
 const Profile = () => {
   return (
@@ -10,5 +9,3 @@ const Profile = () => {
 };
 
 export default Profile;
-
-export const getServerSideProps = IsAuthenticated;

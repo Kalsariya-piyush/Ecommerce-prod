@@ -32,8 +32,8 @@ const Hero = () => {
             waitForTransition: 1000,
           }}
         >
-          {ARR_LAYOUT.map(() => (
-            <SwiperSlide className="!overflow-visible">
+          {ARR_LAYOUT.map((item) => (
+            <SwiperSlide key={item} className="!overflow-visible">
               <div className="flex sm:flex-row flex-col justify-center items-center gap-4 sm:gap-9 w-full">
                 <div className="flex flex-col items-start gap-6 max-w-356px">
                   <div>

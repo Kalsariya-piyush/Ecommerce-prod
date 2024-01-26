@@ -144,7 +144,10 @@ const Footer = () => {
 
               <div className="flex flex-wrap gap-2">
                 {PopularTag.map(({ id, name }) => (
-                  <p className="hover:bg-gray-800 px-2.5 py-1.5 border-[1px] border-[#303639] rounded-sm w-fit">
+                  <p
+                    key={id}
+                    className="hover:bg-gray-800 px-2.5 py-1.5 border-[1px] border-[#303639] rounded-sm w-fit"
+                  >
                     {name}
                   </p>
                 ))}

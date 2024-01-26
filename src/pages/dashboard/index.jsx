@@ -1,5 +1,4 @@
-import Layout from "@/layouts/Layout";
-import {useRouter} from "next/router";
+import Layout from '@/layouts/Layout';
 
 const Index = () => {
   return (
@@ -10,5 +9,3 @@ const Index = () => {
 };
 
 export default Index;
-
-// export const getServerSideProps = IsAuthenticated;

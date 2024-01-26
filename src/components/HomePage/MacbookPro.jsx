@@ -26,7 +26,7 @@ const MacbookPro = () => {
 
             <div className="lg:order-2 order-1">
               <img
-                src="/assets/HomePage/MacbookPro.png"
+                src="/assets/Temp/MacbookPro.png"
                 alt="homepod mini"
                 className="mx-auto lg:h-[380px] md:h-2/5 xs:h-[270px] h-auto lg:w-[500px] md:w-2/5 xs:w-[340px] w-auto"
               />

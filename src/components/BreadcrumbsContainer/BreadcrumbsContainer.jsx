@@ -1,15 +1,15 @@
-import Link from "next/link";
-import HomeIcon from "@/components/Icons/HomeIcon";
-import {ArrowVectorIcon} from "@/components/Icons/ArrowVectorIcon";
-import {Breadcrumbs} from "@mui/material";
+import { ArrowVectorIcon } from '@/components/Icons/ArrowVectorIcon';
+import HomeIcon from '@/components/Icons/HomeIcon';
+import { Breadcrumbs } from '@mui/material';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-const BreadcrumbsContainer = ({middleArray, lastPage}) => {
+const BreadcrumbsContainer = () => {
   const router = useRouter();
-  const pathSegments = router.asPath.split('/').filter((segment) => segment !== '');
 
-
-  console.log(pathSegments.length);
+  const pathSegments = router.asPath
+    .split('/')
+    .filter((segment) => segment !== '');
 
   return (
     <div className="bg-gray-50 py-6">
@@ -22,12 +22,23 @@ const BreadcrumbsContainer = ({middleArray, lastPage}) => {
             color="inherit"
             href="/"
           >
-            <HomeIcon fill={"#5F6C72"} /> Home
+            <HomeIcon fill={'#5F6C72'} /> Home
           </Link>
+
           {pathSegments.map((segment, index) => (
             <span key={segment}>
-              <Link className={`${pathSegments.length === 1 ? `font-public-sans font-medium text-sm leading-5 text-secondary-500`: `${!index < pathSegments.length - 1 && "font-public-sans font-medium text-sm leading-5 text-secondary-500"}`} capitalize`} href={`/${pathSegments.slice(0, index + 1).join("/")}`}>
-                {segment.replaceAll("-", " ")}
+              <Link
+                className={`${
+                  pathSegments.length === 1
+                    ? `font-public-sans font-medium text-sm leading-5 text-secondary-500`
+                    : `${
+                        !index < pathSegments.length - 1 &&
+                        'font-public-sans font-medium text-sm leading-5 text-secondary-500'
+                      }`
+                } capitalize`}
+                href={`/${pathSegments.slice(0, index + 1).join('/')}`}
+              >
+                {segment.replaceAll('-', ' ')}
               </Link>
             </span>
           ))}

@@ -28,7 +28,7 @@ const Banner = () => {
 
               <div className="lg:order-2 order-1">
                 <img
-                  src="/assets/HomePage/homepod.png"
+                  src="/assets/Temp/homepod.png"
                   alt="homepod mini"
                   className="w-60 h-60"
                 />
@@ -59,7 +59,7 @@ const Banner = () => {
 
               <div className="lg:mx-0 mx-auto lg:order-2 order-1 lg:mt-0 mt-6">
                 <img
-                  src="/assets/HomePage/xeomiPhone.png"
+                  src="/assets/Temp/xeomiPhone.png"
                   alt="homepod mini"
                   className="w-60 h-60"
                 />
