@@ -155,7 +155,7 @@ const Footer = () => {
       </div>
       <div className="border-t-[1px] border-[#303639] py-2"></div>
       <div className="text-center text-[#ADB7BC] pb-3 sm:px-0 px-3">
-        @copyright 2024 clicon All rights reserved.
+        @copyright 2024 kaushik shamajibhai bhikadiya All rights reserved
       </div>
     </div>
   );

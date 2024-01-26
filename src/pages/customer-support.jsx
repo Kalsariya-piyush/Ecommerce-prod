@@ -1,8 +1,6 @@
 import CallIcon from '@/components/Icons/CallIcon';
 import { MsgIcon } from '@/components/Icons/MsgIcon';
 import RightArrowIcon from '@/components/Icons/RightArrowIcon';
-import Layout from '@/layouts/Layout';
-import { Button } from '@mui/material';
 import Link from 'next/link';
 import { useState } from 'react';
 import { CiWallet } from 'react-icons/ci';
@@ -11,6 +9,7 @@ import { FiHome, FiUnlock } from 'react-icons/fi';
 import { LuSquareEqual } from 'react-icons/lu';
 import { MdPayment } from 'react-icons/md';
 import { PiTruckFill, PiUserDuotone } from 'react-icons/pi';
+import Layout from '../layouts/Layout';
 
 let SERVICES = [
   {
@@ -57,51 +56,42 @@ const CustomerSupport = () => {
 
   return (
     <Layout>
-      <div>
-        <div className="bg-white text-gray-900">
-          <div className="max-w-7xl mx-auto my-3">
-            <div className="flex items-center justify-between lg:flex-row flex-col lg:px-4">
-              <div className="lg:order-1 order-2">
-                <div className="">
-                  <Button className="bg-warning-400 hover:bg-warning-400 text-gray-900 uppercase rounded-sm px-4 py-2 font-semibold">
-                    Help center
-                  </Button>
-                  <h1 className="font-Public text-3xl font-Public Sans py-3 font-semibold">
-                    How can i help you!
-                  </h1>
-                </div>
+      <div className="bg-white text-gray-900">
+        <div className="max-w-7xl mx-auto my-3">
+          <div className="flex items-center justify-between lg:flex-row flex-col lg:px-4">
+            <divf className="lg:order-1 order-2">
+              <div className="">
+                <button className="bg-warning-400 uppercase rounded-sm px-4 py-2 font-semibold">
+                  Help center
+                </button>
+                <h1 className="font-Public text-3xl font-Public Sans py-3 font-semibold">
+                  How can i help you!
+                </h1>
+              </div>
 
-                <div className="border border-gray-100 rounded-sm p-2">
-                  <form
-                    className={`flex items-center gap-x-2`}
-                    onSubmit={handleSearch}
+              <div className="border border-gray-100 rounded-sm p-2">
+                <form
+                  className={`flex items-center gap-x-2`}
+                  onSubmit={handleSearch}
+                >
+                  <input
+                    type="type"
+                    className="outline-none sm:w-72 xs:w-auto placeholder:text-gray-500 text-sm font-normal leading-5 rounded-sm text-black w-full px-2 py-2.5"
+                    onChange={(e) => {
+                      setSearchQuery(e.target.value);
+                    }}
+                    placeholder="Enter your question or keyword"
+                    value={searchQuery}
+                  />
+                  <button
+                    type="submit"
+                    className="uppercase rounded-sm px-4 text-white top-3 right-4 text-sm flex items-center font-semibold leading-10 bg-primary-500 hover:bg-orange-500"
                   >
-                    <input
-                      type="type"
-                      className="outline-none sm:w-72 xs:w-auto  placeholder:text-gray-500 text-sm font-normal leading-5 rounded-sm text-black w-full px-2 py-2.5"
-                      onChange={(e) => {
-                        setSearchQuery(e.target.value);
-                      }}
-                      placeholder="Enter your question or keyword"
-                      value={searchQuery}
-                    />
-                    <Button
-                      type="submit"
-                      className="uppercase rounded-sm px-4 text-white   text-sm flex items-center font-semibold leading-10 bg-primary-500 hover:bg-orange-500"
-                    >
-                      Search
-                    </Button>
-                  </form>
-                </div>
+                    Search
+                  </button>
+                </form>
               </div>
-
-              <div className="lg:my-0 pb-4 lg:order-2 order-1 lg:w-1/3 xs:w-96 w-auto">
-                <img
-                  src="assets/customerSupport/139320-using-girl-laptop-happy-free-hq-image.png"
-                  alt="girlwithlaptop"
-                />
-              </div>
-            </div>
+            </divf>
 
             <div className="lg:my-0 pb-4 lg:order-2 order-1 lg:w-1/3 xs:w-96 w-auto">
               <img
@@ -122,24 +112,22 @@ const CustomerSupport = () => {
               </h1>
 
               <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 capitalize md:px-4 sm:px-16 px-10">
-                {SERVICES.map(({ icon, label }, index) => (
-                  <>
-                    <Link
-                      href="/"
-                      key={index}
-                      className=" hover:shadow-lg flex gap-x-3 border hover:border active:border-2 rounded-sm border-primary-500 p-4 drop-shadow-xl"
-                    >
-                      <div className="text-2xl text-primary-500 ">{icon}</div>
-                      <p className="text-base">{label}</p>
-                    </Link>
-                  </>
+                {SERVICES.map(({ label, icon }, index) => (
+                  <Link
+                    href="/"
+                    key={index}
+                    className=" hover:shadow-lg flex gap-x-3 border hover:border active:border-[2px] rounded-[3px] border-primary-500 p-4 drop-shadow-xl"
+                  >
+                    <div className="text-2xl text-primary-500 ">{icon}</div>
+                    <p className="text-base">{label} </p>
+                  </Link>
                 ))}
               </div>
             </div>
           </div>
         </div>
 
-        <div className="border border-t-gray-100"></div>
+        <div className="border-t border-t-gray-100"></div>
 
         <div className="max-w-7xl mx-auto pt-4">
           <div className="">
@@ -199,12 +187,9 @@ const CustomerSupport = () => {
       <div className="bg-gray-50 text-gray-900">
         <div className="py-16">
           <div className="pb-4 flex flex-col items-center">
-            <Button
-              href=""
-              className="bg-secondary-500 hover:bg-secondary-500 px-4 py-1.5 rounded-sm my-3 lg:mt-0  text-white font-semibold"
-            >
-              connect us
-            </Button>
+            <button className="bg-secondary-500 px-4 py-1.5 rounded-sm my-3 lg:mt-0  text-white font-semibold">
+              <a href="">connect us</a>
+            </button>
             <h1 className="font-Public font-semibold text-3xl">
               Dont find your answer
             </h1>
@@ -223,49 +208,45 @@ const CustomerSupport = () => {
                   <h2 className="font-Public text-lg font-semibold capitalize">
                     call us now
                   </h2>
-                  <p className="text-blue-600 text-sm pt-1">
+                  <p className="text-gray-600 text-sm pt-1">
                     we are available online from 9:00 AM to 5:00 PM
                   </p>
-                  <p className="text-blue-600 text-sm mb-2">
+                  <p className="text-gray-600 text-sm mb-2">
                     (GMT95:45) Talk with use now
                   </p>
-                  <a className="text-2xl" href="tel:+91 9510449518">
-                    +91 9510449518
+                  <a className="text-2xl" href="tel:+91 9054396057">
+                    +91 9054396057
                   </a>
-                  <Button
-                    href="tel:+91 9510449518"
-                    className="flex items-center  bg-secondary-500 hover:bg-secondary-500 text-white px-6 my-2 py-1.5 gap-x-2 rounded-sm uppercase"
-                  >
+                  <button className="flex items-center bg-secondary-500 text-white px-6 my-2 py-1.5 gap-x-2 rounded-sm uppercase">
                     call now <RightArrowIcon />
-                  </Button>
+                  </button>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <div className="bg-white drop-shadow-xl  lg:mt-0 mt-5 lg:mx-0 mx-auto">
-        <div className="flex sm:gap-x-4 gap-x-1 sm:p-5 p-3 sm:flex-row flex-col">
-          <MsgIcon />
-
-          <div className="sm:px-2 px-1 py-2">
-            <h2 className="font-Public text-lg font-semibold capitalize">
-              chat us now
-            </h2>
-
-            <p className="text-blue-600 text-sm pt-1">
-              we are available online from 9:00 AM to 5:00 PM
-            </p>
-            <p className="text-blue-600 text-sm mb-2">
-              (GMT95:45) Talk with use now
-            </p>
-            <p className="text-2xl py-1">Ecomm@gmail.com</p>
-
-            <Button className="flex items-center bg-success-500 hover:bg-success-500 text-white px-6 py-1.5 gap-x-2 rounded-sm uppercase">
-              Chat us
-              <RightArrowIcon />
-            </Button>
+            <div className="bg-white drop-shadow-xl  lg:mt-0 mt-5 lg:mx-0 mx-auto">
+              <div className="flex sm:gap-x-4 gap-x-1 sm:p-5 p-3 sm:flex-row flex-col">
+                <div className="">
+                  <MsgIcon />
+                </div>
+                <div className="sm:px-2 px-1 py-2">
+                  <h2 className="font-Public text-lg font-semibold capitalize">
+                    chat us now
+                  </h2>
+                  <p className="text-gray-600 text-sm pt-1">
+                    we are available online from 9:00 AM to 5:00 PM
+                  </p>
+                  <p className="text-gray-600 text-sm mb-2">
+                    (GMT95:45) Talk with use now
+                  </p>
+                  <p className="text-2xl py-1">Ecomm@gmail.com</p>
+                  <button className="flex items-center bg-succes-500 text-white px-6 py-1.5 gap-x-2 rounded-sm uppercase">
+                    Chat us
+                    <RightArrowIcon />
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

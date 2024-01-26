@@ -1,12 +1,8 @@
-import Layout from "@/layouts/Layout";
-import {useRouter} from "next/router";
+import Layout from '@/layouts/Layout';
+import { useRouter } from 'next/router';
 
 const Index = () => {
-  return (
-    <Layout>
-      <div>dashboard</div>
-    </Layout>
-  );
+  return <Layout></Layout>;
 };
 
 export default Index;
