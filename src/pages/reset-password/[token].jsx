@@ -1,6 +1,7 @@
 import { InputField } from '@/components/InputField';
 import Loader from '@/components/Loaders/Loader';
 import { ERRORS, getCharacterValidationError } from '@/constants';
+import { resetPasswordHandler } from '@/functions/auththenticaion';
 import { AuthCheck } from '@/utils/AuthCheck';
 import { Button } from '@mui/material';
 import { useFormik } from 'formik';
@@ -8,7 +9,6 @@ import { useRouter } from 'next/router';
 import { memo, useState } from 'react';
 import { toast } from 'react-toastify';
 import * as yup from 'yup';
-import { resetPasswordHandler } from '../api/auth';
 
 const ResetPassword = () => {
   const router = useRouter();

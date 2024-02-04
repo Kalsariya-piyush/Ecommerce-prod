@@ -1,6 +1,7 @@
 import { InputField } from '@/components/InputField';
 import Loader from '@/components/Loaders/Loader';
 import { ERRORS } from '@/constants';
+import { forgotPasswordHandler } from '@/functions/auththenticaion';
 import { AuthCheck } from '@/utils/AuthCheck';
 import { Button } from '@mui/material';
 import { useFormik } from 'formik';
@@ -8,7 +9,6 @@ import Link from 'next/link';
 import { memo, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import * as yup from 'yup';
-import { forgotPasswordHandler } from './api/auth';
 
 const ForgotPassword = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -37,6 +37,7 @@ const ForgotPassword = () => {
             }
           })
           .catch((error) => {
+            console.log('error > ', error);
             if (
               error?.response?.data?.message ===
               'User not found with this email'

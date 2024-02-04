@@ -64,4 +64,49 @@ const HandleLogout = async () => {
   );
 };
 
-export { GetCurrentUser, HandleLogout, LoginHandler, SignUpHandler };
+const forgotPasswordHandler = async (email) => {
+  const body = {
+    email,
+  };
+
+  const res = await axios.post(
+    `${process.env.NEXT_PUBLIC_API_ENDPOINT}/user/forgot-password-token`,
+    body,
+    {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      withCredentials: true,
+    }
+  );
+
+  return res;
+};
+
+const resetPasswordHandler = async (hash, password) => {
+  const body = {
+    password,
+  };
+
+  const res = await axios.put(
+    `${process.env.NEXT_PUBLIC_API_ENDPOINT}/user/reset-password/${hash}`,
+    body,
+    {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      withCredentials: true,
+    }
+  );
+
+  return res;
+};
+
+export {
+  GetCurrentUser,
+  HandleLogout,
+  LoginHandler,
+  SignUpHandler,
+  forgotPasswordHandler,
+  resetPasswordHandler,
+};

@@ -1,5 +1,6 @@
-import { deleteCookie } from '@/constants';
-import { GetCurrentUser, HandleLogout } from '@/functions/auththenticaion';
+import { token } from '@/constants';
+import axios from 'axios';
+import Cookies from 'js-cookie';
 import { createContext, useContext, useEffect, useState } from 'react';
 
 export const AuthContext = createContext();
@@ -7,6 +8,29 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
   const [isLoadingUser, setIsLoadingUser] = useState(true);
+
+  const GetCurrentUser = async () => {
+    return await axios.get(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/user/me`, {
+      headers: {
+        Authorization: `Bearer ${token()}`,
+        'Content-Type': 'application/json',
+      },
+      withCredentials: true,
+    });
+  };
+
+  const HandleLogout = async () => {
+    return await axios.get(
+      `${process.env.NEXT_PUBLIC_API_ENDPOINT}/user/logout`,
+      {
+        headers: {
+          Authorization: `Bearer ${token()}`,
+          'Content-Type': 'application/json',
+        },
+        withCredentials: true,
+      }
+    );
+  };
 
   const getUser = async () => {
     setIsLoadingUser(true);
@@ -25,7 +49,7 @@ export const AuthProvider = ({ children }) => {
   const LogoutHandler = () => {
     HandleLogout()
       .then(() => {
-        deleteCookie('accessToken');
+        Cookies.remove('accessToken');
         setCurrentUser(null);
       })
       .catch((error) => {
