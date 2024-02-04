@@ -56,7 +56,6 @@ const Register = () => {
 
         SignUpHandler(value)
           .then((res) => {
-            console.log('res?.data? ', res?.data?._id);
             if (res?.data && res?.data?._id && typeof window !== undefined) {
               router.push('/login');
             }

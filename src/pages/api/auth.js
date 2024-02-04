@@ -1,5 +1,4 @@
-import { token } from '@/constants';
-import axios from 'axios';
+import Axios from '@/utils/Axios.config';
 
 const signUpHanlder = async (data) => {
   const body = {
@@ -9,7 +8,7 @@ const signUpHanlder = async (data) => {
     name: `${data.firstName} ${data.lastName}`,
   };
 
-  const res = await axios.post(
+  const res = await Axios.post(
     `${process.env.NEXT_PUBLIC_API_ENDPOINT}/signup`,
     body
   );
@@ -23,50 +22,22 @@ const signInHanlder = async (data) => {
     password: data.password,
   };
 
-  const res = await axios.post(
+  const res = await Axios.post(
     `${process.env.NEXT_PUBLIC_API_ENDPOINT}/signin`,
-    body,
-    {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      withCredentials: true,
-    }
+    body
   );
 
   return res.data;
 };
 
 const getCurrentUser = async () => {
-  const res = await axios.get(
-    `${process.env.NEXT_PUBLIC_API_ENDPOINT}/user`,
-    {
-      headers: {
-        Authorization: `Bearer ${token()}`,
-        'Content-Type': 'application/json',
-      },
-    },
-    {
-      withCredentials: true,
-    }
-  );
+  const res = await Axios.get(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/user`);
 
   return res;
 };
 
 const logOutHandler = async () => {
-  const res = await axios.get(
-    `${process.env.NEXT_PUBLIC_API_ENDPOINT}/logout`,
-    {
-      headers: {
-        Authorization: `Bearer ${token()}`,
-        'Content-Type': 'application/json',
-      },
-    },
-    {
-      withCredentials: true,
-    }
-  );
+  const res = await Axios.get(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/logout`);
 
   return res;
 };
@@ -76,15 +47,9 @@ const forgotPasswordHandler = async (email) => {
     email,
   };
 
-  const res = await axios.post(
+  const res = await Axios.post(
     `${process.env.NEXT_PUBLIC_API_ENDPOINT}/user/forgot-password-token`,
-    body,
-    {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      withCredentials: true,
-    }
+    body
   );
 
   return res;
@@ -95,15 +60,9 @@ const resetPasswordHandler = async (hash, password) => {
     password,
   };
 
-  const res = await axios.put(
+  const res = await Axios.put(
     `${process.env.NEXT_PUBLIC_API_ENDPOINT}/user/reset-password/${hash}`,
-    body,
-    {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      withCredentials: true,
-    }
+    body
   );
 
   return res;

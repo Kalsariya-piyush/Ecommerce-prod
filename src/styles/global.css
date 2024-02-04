@@ -147,6 +147,18 @@ body {
   @apply !shadow-primary !rounded border !border-gray-100
 }
 
+.MuiAccordionSummary-content.MuiAccordionSummary-contentGutters.css-o4b71y-MuiAccordionSummary-content {
+  margin: 0 !important;
+}
+
+.css-1c35hjw-MuiPaper-root-MuiAccordion-root::before {
+  @apply !hidden
+}
+
+.MuiAccordionSummary-expandIconWrapper.css-yw020d-MuiAccordionSummary-expandIconWrapper {
+  transform: rotate(0deg) !important;
+}
+
 /* Toastify  */
 .Toastify__toast-icon.Toastify--animate-icon.Toastify__zoom-enter {
   @apply !mt-0.5

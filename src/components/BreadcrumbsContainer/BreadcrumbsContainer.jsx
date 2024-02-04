@@ -13,7 +13,7 @@ const BreadcrumbsContainer = () => {
 
   return (
     <div className="bg-gray-50 py-6">
-      <div className="max-w-[1240px] mx-auto">
+      <div className="max-w-7xl sm:!px-5 !px-3 mx-auto">
         <Breadcrumbs separator={<ArrowVectorIcon />} aria-label="breadcrumb">
           <Link
             underline="hover"

@@ -27,6 +27,7 @@ module.exports = {
       '4xl': '2.25rem',
       '5xl': '3rem',
       '6xl': '4rem',
+      '32px': '32px',
     },
     extend: {
       colors: {
@@ -78,6 +79,8 @@ module.exports = {
           500: '#2DB224',
         },
         warning: {
+          100: '#FBF4CE',
+          200: '#F7E99E',
           400: '#EFD33D',
           500: '#EBC80C',
         },

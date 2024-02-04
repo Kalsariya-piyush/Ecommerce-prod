@@ -1,5 +1,4 @@
 import Categories from '@/components/Categories';
-import CallIcon from '@/components/Icons/CallIcon';
 import CallIcon2 from '@/components/Icons/CallIcon2';
 import CartIcon from '@/components/Icons/CartIcon';
 import CloseIcon from '@/components/Icons/CloseIcon';
@@ -300,7 +299,7 @@ const Header = () => {
 
       <div className="px-3 sm:px-5 !block sm:!hidden">
         <form
-          className={`relative border-2 mx-auto rounded-lg overflow-hidden mt-4 w-full`}
+          className={`relative border-2 mx-auto rounded-lg overflow-hidden my-4 w-full`}
           onSubmit={handleSearch}
         >
           <input
