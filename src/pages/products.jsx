@@ -1,12 +1,8 @@
-import Products from '../components/pages/Products';
+import { memo } from 'react';
 import Layout from '../layouts/Layout';
 
 const ProductsPage = () => {
-  return (
-    <Layout>
-      <Products />
-    </Layout>
-  );
+  return <Layout>All products under construction...</Layout>;
 };
 
-export default ProductsPage;
+export default memo(ProductsPage);

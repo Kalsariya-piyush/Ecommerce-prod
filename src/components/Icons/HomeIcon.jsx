@@ -1,4 +1,4 @@
-export let HomeIcon = ({ fill }) => {
+const HomeIcon = ({ fill }) => {
   return (
     <div>
       <svg
@@ -19,4 +19,5 @@ export let HomeIcon = ({ fill }) => {
     </div>
   );
 };
+
 export default HomeIcon;

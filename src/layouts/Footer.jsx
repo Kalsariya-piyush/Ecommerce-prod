@@ -1,6 +1,6 @@
 import CliconIcon from '@/components/Icons/CliconIcon';
 import MacStoreIcon from '@/components/Icons/MacStoreIcon';
-import PlaysroreIcon from '@/components/Icons/PlaysroreIcon';
+import PlayStoreIcon from '@/components/Icons/PlaystoreIcon';
 
 const Footer = () => {
   let PopularTag = [
@@ -133,7 +133,7 @@ const Footer = () => {
                 </h1>
 
                 <div className="leading-7">
-                  <PlaysroreIcon />
+                  <PlayStoreIcon />
                   <MacStoreIcon />
                 </div>
               </div>

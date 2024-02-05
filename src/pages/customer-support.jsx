@@ -2,13 +2,14 @@ import CallIcon from '@/components/Icons/CallIcon';
 import { MsgIcon } from '@/components/Icons/MsgIcon';
 import RightArrowIcon from '@/components/Icons/RightArrowIcon';
 import Link from 'next/link';
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import { CiWallet } from 'react-icons/ci';
 import { FaNotesMedical } from 'react-icons/fa6';
 import { FiHome, FiUnlock } from 'react-icons/fi';
 import { LuSquareEqual } from 'react-icons/lu';
 import { MdPayment } from 'react-icons/md';
 import { PiTruckFill, PiUserDuotone } from 'react-icons/pi';
+
 import Layout from '../layouts/Layout';
 
 let SERVICES = [
@@ -254,4 +255,4 @@ const CustomerSupport = () => {
   );
 };
 
-export default CustomerSupport;
+export default memo(CustomerSupport);

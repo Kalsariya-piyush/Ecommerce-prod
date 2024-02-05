@@ -1,7 +1,8 @@
 import Layout from '@/layouts/Layout';
+import { memo } from 'react';
 
 const Wishlist = () => {
   return <Layout>Wishlist</Layout>;
 };
 
-export default Wishlist;
+export default memo(Wishlist);

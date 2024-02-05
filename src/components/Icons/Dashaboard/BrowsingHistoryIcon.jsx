@@ -1,4 +1,4 @@
-export const BrowsingHistoryIcon = () => {
+const BrowsingHistoryIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -38,3 +38,5 @@ export const BrowsingHistoryIcon = () => {
     </svg>
   );
 };
+
+export { BrowsingHistoryIcon };

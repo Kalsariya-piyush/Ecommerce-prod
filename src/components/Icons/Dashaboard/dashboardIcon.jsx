@@ -1,4 +1,4 @@
-export const DashboardIcon = () => {
+const DashboardIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -28,3 +28,5 @@ export const DashboardIcon = () => {
     </svg>
   );
 };
+
+export { DashboardIcon };

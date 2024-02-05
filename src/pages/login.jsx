@@ -1,9 +1,3 @@
-import { InputField } from '@/components/InputField';
-import Loader from '@/components/Loaders/Loader';
-import { HandleSetCookie } from '@/constants';
-import { useAuth } from '@/context/auth';
-import { LoginHandler } from '@/functions/auththenticaion';
-import { AuthCheck } from '@/utils/AuthCheck';
 import { Button } from '@mui/material';
 import { useFormik } from 'formik';
 import Link from 'next/link';
@@ -11,6 +5,13 @@ import { useRouter } from 'next/router';
 import { memo, useState } from 'react';
 import { toast } from 'react-toastify';
 import * as yup from 'yup';
+
+import { InputField } from '@/components/InputField';
+import Loader from '@/components/Loaders/Loader';
+import { HandleSetCookie } from '@/constants';
+import { useAuth } from '@/context/auth';
+import { LoginHandler } from '@/functions/auththenticaion';
+import { AuthCheck } from '@/utils/AuthCheck';
 
 const Login = () => {
   const router = useRouter();

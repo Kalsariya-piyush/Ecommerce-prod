@@ -24,13 +24,13 @@ const NAV_LINKS = [
     id: 1,
     icon: <LocationIcon className="w-5" />,
     label: 'Track Order',
-    href: '/track-order',
+    href: '/dashboard/track-order',
   },
   {
     id: 2,
     icon: <ProcessIcon className="w-5" />,
     label: 'Compare',
-    href: '/compare',
+    href: '/dashboard/compare',
   },
   {
     id: 3,
@@ -184,15 +184,15 @@ const Header = () => {
           </div>
 
           <div className="w-1/4 flex gap-3 md:gap-5 lg:gap-6 justify-end items-center">
-            <Link href="/cart">
+            <Link href="/dashboard/shopping-cart">
               <CartIcon count={5} />
             </Link>
 
-            <Link href="/wishlist">
+            <Link href="/dashboard/wishlist">
               <HeartIcon />
             </Link>
 
-            <Link href="/profile">
+            <Link href="/dashboard/profile">
               <ProfileIcon />
             </Link>
           </div>

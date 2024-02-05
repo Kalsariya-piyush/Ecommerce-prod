@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { memo, useState } from 'react';
 
 import GreenTick from '@/components/Icons/GreenTick';
 import PlayIcon from '@/components/Icons/PlayIcon';
@@ -349,4 +349,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default memo(AboutUs);

@@ -1,4 +1,4 @@
-import BreadcrumbsContainer from '@/components/BreadcrumbsContainer/BreadcrumbsContainer';
+import BreadcrumbsContainer from '@/components/BreadcrumbsContainer';
 import { SideBar } from '@/components/Dashboard/SideBar';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';

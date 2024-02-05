@@ -1,4 +1,4 @@
-export default function RightArrowIcon() {
+const RightArrowIcon = () => {
   return (
     <div>
       <svg
@@ -23,4 +23,6 @@ export default function RightArrowIcon() {
       </svg>
     </div>
   );
-}
+};
+
+export default RightArrowIcon;

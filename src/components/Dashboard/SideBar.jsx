@@ -72,7 +72,7 @@ const CATEGORIES = [
     id: 10,
     icon: <LogoutIcon />,
     title: 'Log-out',
-    href: '/dashboard',
+    href: '/',
   },
 ];
 
@@ -89,20 +89,17 @@ export const SideBar = () => {
   const handleChangeCategory = (category, href) => {
     setSelectedCategory(category);
 
-    LogoutHandler();
+    if (category === 'Log-out') {
+      LogoutHandler();
+      router?.push('/');
+      return;
+    }
 
     if (router.asPath !== href) {
       router?.push(href);
     }
   };
 
-  console.log(
-    'sssddd',
-    pathSegments[pathSegments.length - 1]
-      .replaceAll('-', ' ')
-      .toLocaleLowerCase()
-      .replace('and', '&')
-  );
   return (
     <div>
       <div

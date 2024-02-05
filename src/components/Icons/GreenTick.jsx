@@ -1,4 +1,4 @@
-export let GreenTick = () => {
+const GreenTick = () => {
   return (
     <div>
       <svg
@@ -26,4 +26,5 @@ export let GreenTick = () => {
     </div>
   );
 };
+
 export default GreenTick;
