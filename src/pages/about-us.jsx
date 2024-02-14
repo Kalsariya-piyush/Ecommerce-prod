@@ -3,6 +3,7 @@ import { memo, useState } from 'react';
 import GreenTick from '@/components/Icons/GreenTick';
 import PlayIcon from '@/components/Icons/PlayIcon';
 import RightArrowIcon from '@/components/Icons/RightArrowIcon';
+import Layout from '@/layouts/Layout';
 
 const TEAM_MEMBERS = [
   {
@@ -86,15 +87,17 @@ const AboutUs = () => {
     e.preventDefault();
     console.log('Searchdata  >> ', searchQuery);
   };
+
   return (
-    <>
-      <div className="my-20 text-gray-900">
+    <Layout className={'!max-w-none !p-0'}>
+      <div className="my-6 text-gray-900">
         <div className="max-w-7xl mx-auto">
           <div className="flex lg:flex-row flex-col items-center lg:justify-between justify-start xl:mx-0 mx-3">
             <div className="lg:w-1/2 smz:w-[500px] w-auto   order-2 lg:order-1">
-              <button className="bg-secondary-500 px-4 py-2 rounded-sm my-2 lg:mt-0 mt-4 text-white font-semibold">
+              <div className="bg-secondary-500 px-4 py-2 rounded-sm my-2 lg:mt-0 mt-4 text-white font-semibold">
                 WHO WE ARE
-              </button>
+              </div>
+
               <div className="flex flex-col lg:gap-y-5 gap-y-4">
                 <h1 className="lg:text-[40px] text-3xl font-semibold lg:leading-56 leading-10">
                   Kinbo - largest electronics retail shop in the world.
@@ -345,7 +348,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-    </>
+    </Layout>
   );
 };
 

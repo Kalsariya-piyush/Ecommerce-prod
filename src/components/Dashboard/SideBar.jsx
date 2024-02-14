@@ -13,7 +13,7 @@ import { TrackOrderIcon } from '../Icons/Dashaboard/TrackOrderIcon';
 import { WishlistIcon } from '../Icons/Dashaboard/WishlistIcon';
 import { DashboardIcon } from '../Icons/Dashaboard/dashboardIcon';
 
-const CATEGORIES = [
+const MENU_ITEMS = [
   {
     id: 1,
     icon: <DashboardIcon />,
@@ -103,14 +103,14 @@ export const SideBar = () => {
   return (
     <div>
       <div
-        MenuListProps={{
+        menuListProps={{
           'aria-labelledby': 'basic-button',
         }}
         className="max-w-[1240px] mx-auto"
       >
         <div className="rounded bg-white border border-gray-100 shadow-2xl w-[264px] py-1">
-          {CATEGORIES && CATEGORIES.length > 0 ? (
-            CATEGORIES?.map(({ id, icon, title, href }) => (
+          {MENU_ITEMS && MENU_ITEMS.length > 0 ? (
+            MENU_ITEMS?.map(({ id, icon, title, href }) => (
               <MenuItem
                 key={id}
                 onClick={() => handleChangeCategory(title, href)}

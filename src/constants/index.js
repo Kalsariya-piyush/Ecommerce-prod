@@ -29,4 +29,22 @@ const ERRORS = {
   RESET_PASSWORD_SUCCESS: 'Password reset successfully.',
 };
 
-export { ERRORS, HandleSetCookie, getCharacterValidationError, token };
+const TAGS = [
+  {
+    id: 1,
+    label: 'Featured',
+    value: 'featured',
+  },
+  {
+    id: 2,
+    label: 'Popular',
+    value: 'popular',
+  },
+  {
+    id: 3,
+    label: 'Special',
+    value: 'special',
+  },
+];
+
+export { ERRORS, HandleSetCookie, TAGS, getCharacterValidationError, token };

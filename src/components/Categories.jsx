@@ -14,7 +14,7 @@ const Categories = ({
       anchorEl={anchorEl}
       open={open}
       onClose={handleClose}
-      MenuListProps={{
+      menuListProps={{
         'aria-labelledby': 'basic-button',
       }}
       className="mt-3 max-h-[400px]"
