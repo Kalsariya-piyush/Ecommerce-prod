@@ -1,6 +1,6 @@
 const CliconIcon = () => {
   return (
-    <div>
+    <div className="mb-3">
       <svg
         width="177"
         height="48"

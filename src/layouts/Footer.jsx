@@ -1,79 +1,83 @@
-import CliconIcon from '@/components/Icons/CliconIcon';
-import MacStoreIcon from '@/components/Icons/MacStoreIcon';
-import PlayStoreIcon from '@/components/Icons/PlaystoreIcon';
+import CliconIcon from "@/components/Icons/CliconIcon";
+import MacStoreIcon from "@/components/Icons/MacStoreIcon";
+import PlayStoreIcon from "@/components/Icons/PlaystoreIcon";
 
 const Footer = () => {
   let PopularTag = [
     {
       id: 1,
-      name: 'game',
+      name: "game",
     },
     {
       id: 2,
-      name: 'iphone',
+      name: "iphone",
     },
     {
       id: 3,
-      name: 'tv',
+      name: "tv",
     },
     {
       id: 4,
-      name: 'asus laptop',
+      name: "asus laptop",
     },
     {
       id: 5,
-      name: 'macbook',
+      name: "macbook",
     },
     {
       id: 6,
-      name: 'ssd',
+      name: "ssd",
     },
     {
       id: 7,
-      name: 'graphics card',
+      name: "graphics card",
     },
     {
       id: 8,
-      name: 'power bank',
+      name: "power bank",
     },
     {
       id: 9,
-      name: 'smart tv',
+      name: "smart tv",
     },
     {
       id: 10,
-      name: 'speaker',
+      name: "speaker",
     },
     {
       id: 11,
-      name: 'tablet',
+      name: "tablet",
     },
     {
       id: 12,
-      name: 'microwave',
+      name: "microwave",
     },
     {
       id: 13,
-      name: 'samsung',
+      name: "samsung",
     },
   ];
   return (
     <div className="bg-black text-white capitalize">
       <div className="max-w-7xl mx-auto">
-        <div className="py-16 xl:mx-0 mx-8">
+        <div className="py-[72px] xl:mx-0 mx-8">
           <div className="flex items-start flex-wrap gap-x-6 xl:gap-y-0 gap-y-5">
             <div className="w-60">
-              <div className="flex flex-col gap-y-2">
+              <div className="flex flex-col gap-y-3">
                 <CliconIcon />
-                <div className="pt-2 text-base">
-                  <p className="text-[#77878F] text-sm">customer supports</p>
-                  <p className="font-medium text-lg">(069)-963-7454</p>
-                </div>
-                <div className="py-1 text-base">
-                  <p className="text-[#ADB7BC]">43,western plaza</p>
-                  <p className="text-[#ADB7BC]">surat,gujarat</p>
+                <div className="text-base">
+                  <p className="text-gray-500 font-normal text-sm pb-1">
+                    customer supports
+                  </p>
+                  <p className="font-medium text-lg text-white">
+                    (629) 555-0129
+                  </p>
                 </div>
                 <div className="text-base">
+                  <p className="text-gray-300 leading-6">43,western plaza</p>
+                  <p className="text-gray-300 leading-6">surat,gujarat</p>
+                </div>
+                <div className="text-base font-medium">
                   <p>Ecomm@gmail.com</p>
                 </div>
               </div>
@@ -81,53 +85,67 @@ const Footer = () => {
 
             {/* <div className="flex lg:justify-evenly justify-between sm:flex-row flex-col"> */}
             <div className="w-48">
-              <div className="flex flex-col items-start gap-y-2">
-                <h1 className="font-medium text-base  uppercase">
-                  top category
+              <div className="flex flex-col items-start gap-y-3">
+                <h1 className="font-medium text-base uppercase">
+                  Top Category
                 </h1>
                 <div className="leading-7">
-                  <p className="text-[#929FA5] hover:text-white">
+                  <p className="text-gray-400 hover:text-white font-medium text-sm ">
                     computer & science
                   </p>
-                  <p className="text-[#929FA5] hover:text-white">smartphone </p>
-                  <p className="text-[#929FA5] hover:text-white">headphone </p>
-                  <p className="text-white font-medium flex items-center gap-x-2">
-                    <span className="bg-[#EBC80C] w-6 h-0.5"></span>Accesories
+                  <p className="text-gray-400 hover:text-white font-medium text-sm">
+                    smartphone{" "}
                   </p>
-                  <p className="text-[#929FA5] hover:text-white">
-                    camera & photo{' '}
+                  <p className="text-gray-400 hover:text-white font-medium text-sm">
+                    headphone{" "}
                   </p>
-                  <p className="text-[#929FA5] hover:text-white">tv & Homes </p>
-                  <p className="text-[#EBC80C]">Browse all products </p>
+                  <p className="text-white flex items-center gap-x-2 font-medium text-sm">
+                    <span className="bg-warning-500 w-6 h-0.5"></span>Accesories
+                  </p>
+                  <p className="text-gray-400 hover:text-white font-medium text-sm">
+                    camera & photo{" "}
+                  </p>
+                  <p className="text-gray-400 hover:text-white font-medium text-sm">
+                    tv & Homes{" "}
+                  </p>
+                  <p className="text-warning-500 font-medium text-sm">
+                    Browse all products{" "}
+                  </p>
                 </div>
               </div>
             </div>
 
             <div className="w-48">
-              <div className="flex flex-col items-start gap-y-2">
+              <div className="flex flex-col items-start gap-y-3">
                 <h1 className="font-medium text-base uppercase">quike links</h1>
                 <div className="leading-7">
-                  <p className="text-[#929FA5] hover:text-white">
+                  <p className="text-gray-400 hover:text-white font-medium text-sm">
                     shop and product
                   </p>
-                  <p className="text-[#929FA5] hover:text-white">
-                    shopping cart{' '}
+                  <p className="text-gray-400 hover:text-white font-medium text-sm">
+                    shopping cart{" "}
                   </p>
-                  <p className="text-[#929FA5] hover:text-white">wishlist </p>
-                  <p className="text-[#929FA5] hover:text-white">compare</p>
-                  <p className="text-[#929FA5] hover:text-white">
-                    track order{' '}
+                  <p className="text-gray-400 hover:text-white font-medium text-sm">
+                    wishlist{" "}
                   </p>
-                  <p className="text-[#929FA5] hover:text-white">
-                    customer support{' '}
+                  <p className="text-gray-400 hover:text-white font-medium text-sm">
+                    compare
                   </p>
-                  <p className="text-[#929FA5] hover:text-white">aboutUs </p>
+                  <p className="text-gray-400 hover:text-white font-medium text-sm">
+                    track order{" "}
+                  </p>
+                  <p className="text-gray-400 hover:text-white font-medium text-sm">
+                    Customer Help{" "}
+                  </p>
+                  <p className="text-gray-400 hover:text-white font-medium text-sm">
+                    aboutUs{" "}
+                  </p>
                 </div>
               </div>
             </div>
 
             <div className="w-48">
-              <div className="flex flex-col gap-y-2">
+              <div className="flex flex-col gap-y-4">
                 <h1 className="font-medium text-base uppercase">
                   download app
                 </h1>
@@ -139,14 +157,13 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="flex flex-col items-start gap-y-2 w-80">
+            <div className="flex flex-col items-start gap-y-4 w-80">
               <h1 className="font-medium text-base uppercase">purchase tag</h1>
-
               <div className="flex flex-wrap gap-2">
                 {PopularTag.map(({ id, name }) => (
                   <p
                     key={id}
-                    className="hover:bg-gray-800 px-2.5 py-1.5 border-[1px] border-[#303639] rounded-sm w-fit"
+                    className="hover:bg-gray-800 px-2.5 py-1.5 border-[1px] border-gray-800 rounded-sm w-fit"
                   >
                     {name}
                   </p>
@@ -156,9 +173,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="border-t-[1px] border-[#303639] py-2"></div>
-      <div className="text-center text-[#ADB7BC] pb-3 sm:px-0 px-3">
-        @copyright 2024 kaushik shamajibhai bhikadiya All rights reserved
+      <div className="border-t-[1px] border-gray-800"></div>
+      <div className="text-center text-gray-300 py-6 sm:px-0 font-normal text-sm leading-5">
+        @copyright 2024 Ecommerce All rights reserved
       </div>
     </div>
   );

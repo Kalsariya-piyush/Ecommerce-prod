@@ -6,7 +6,7 @@ const CloseIcon = ({ className }) => {
       viewBox="0 0 24 24"
       strokeWidth="1.5"
       stroke="currentColor"
-      className={`h-5 w-5 cursor-pointer ${className || ''}`}
+      className={`h-4 w-4 cursor-pointer ${className || ''}`}
     >
       <path
         strokeLinecap="round"

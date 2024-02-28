@@ -15,6 +15,7 @@ const SelectBox = ({
   wrapperClassName,
   options,
   errorClassName,
+  isMultiple,
 }) => {
   return (
     <div className={wrapperClassName || ''}>
@@ -34,6 +35,7 @@ const SelectBox = ({
           onBlur={handleBlur}
           value={value}
           fullWidth
+          multiple={isMultiple || false}
         >
           {options &&
             options.length > 0 &&

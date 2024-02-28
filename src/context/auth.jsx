@@ -1,7 +1,7 @@
+import { HandleSetCookie, token } from '@/constants';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { createContext, useContext, useEffect, useState } from 'react';
-import { token } from '../constants';
 
 export const AuthContext = createContext();
 
@@ -37,6 +37,7 @@ export const AuthProvider = ({ children }) => {
 
     GetCurrentUser()
       .then((res) => {
+        HandleSetCookie('user_role', res.data.role);
         setCurrentUser(res.data);
         setIsLoadingUser(false);
       })
@@ -50,6 +51,7 @@ export const AuthProvider = ({ children }) => {
     HandleLogout()
       .then(() => {
         Cookies.remove('accessToken');
+        Cookies.remove('user_role');
         setCurrentUser(null);
       })
       .catch((error) => {

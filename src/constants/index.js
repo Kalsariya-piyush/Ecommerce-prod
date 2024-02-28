@@ -29,6 +29,11 @@ const ERRORS = {
   RESET_PASSWORD_SUCCESS: 'Password reset successfully.',
 };
 
+const USERS_ROLE = {
+  ADMIN: 'admin',
+  USER: 'user',
+};
+
 const TAGS = [
   {
     id: 1,
@@ -47,4 +52,11 @@ const TAGS = [
   },
 ];
 
-export { ERRORS, HandleSetCookie, TAGS, getCharacterValidationError, token };
+export {
+  ERRORS,
+  HandleSetCookie,
+  TAGS,
+  USERS_ROLE,
+  getCharacterValidationError,
+  token,
+};
