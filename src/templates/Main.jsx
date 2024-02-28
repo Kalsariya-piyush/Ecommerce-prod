@@ -1,4 +1,4 @@
-import BreadcrumbsContainer from '@/components/BreadcrumbsContainer/BreadcrumbsContainer';
+import BreadcrumbsContainer from '@/components/BreadcrumbsContainer';
 import { SideBar } from '@/components/Dashboard/SideBar';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
@@ -6,6 +6,8 @@ import { useRouter } from 'next/router';
 
 const Main = ({ meta, children, className }) => {
   const router = useRouter();
+
+  const isDashboard = router?.asPath?.includes('dashboard');
 
   return (
     <>
@@ -25,11 +27,13 @@ const Main = ({ meta, children, className }) => {
       >
         <div
           className={`w-full min-h-[calc(100vh-260px)] ${
-            router?.asPath?.includes('dashboard') && 'py-10 flex gap-[72px]'
+            isDashboard && 'py-10 flex gap-[72px]'
           } `}
         >
-          {router?.asPath?.includes('dashboard') && <SideBar />}
-          <div className={`rounded-lg dark:border-gray-700`}>{children}</div>
+          {isDashboard && <SideBar />}
+          <div className={`rounded-lg dark:border-gray-700 w-full`}>
+            {children}
+          </div>
         </div>
       </div>
 

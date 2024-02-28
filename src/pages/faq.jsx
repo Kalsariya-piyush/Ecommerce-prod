@@ -3,7 +3,7 @@ import { Button } from '@mui/material';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import { BiMinus, BiPlus } from 'react-icons/bi';
 
 import Layout from '../layouts/Layout';
@@ -148,4 +148,4 @@ const Faq = () => {
   );
 };
 
-export default Faq;
+export default memo(Faq);

@@ -1,4 +1,4 @@
-export const CardsAddressIcon = () => {
+const CardsAddressIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -38,3 +38,5 @@ export const CardsAddressIcon = () => {
     </svg>
   );
 };
+
+export { CardsAddressIcon };

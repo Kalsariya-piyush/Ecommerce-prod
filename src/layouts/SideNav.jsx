@@ -30,7 +30,7 @@ const NAVIGATIONLIST_ITEMS = [
   {
     id: 4,
     label: 'Products',
-    url: '/dashboard/products',
+    url: '/products',
     Icon: FaShoppingBag,
   },
   {

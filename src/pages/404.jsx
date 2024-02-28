@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 import HomeIcon from '@/components/Icons/HomeIcon';
 import LeftArrowIcon from '@/components/Icons/LeftArrowIcon';
+import { memo } from 'react';
 
 const NotFoundPage = () => {
   return (
@@ -49,4 +50,4 @@ const NotFoundPage = () => {
   );
 };
 
-export default NotFoundPage;
+export default memo(NotFoundPage);

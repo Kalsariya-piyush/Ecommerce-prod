@@ -1,11 +1,8 @@
 import Layout from '@/layouts/Layout';
+import { memo } from 'react';
 
 const Profile = () => {
-  return (
-    <Layout>
-      <h1 className="text-2xl font-semibold">Under contruction... </h1>
-    </Layout>
-  );
+  return <Layout>Under contruction...</Layout>;
 };
 
-export default Profile;
+export default memo(Profile);

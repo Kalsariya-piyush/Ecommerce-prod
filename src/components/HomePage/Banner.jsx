@@ -1,74 +1,82 @@
-import RightArrowIcon from '../Icons/RightArrowIcon';
+import { Button } from '@mui/material';
+import Image from 'next/image';
+import { memo } from 'react';
+import LeftArrowIcon from '../Icons/LeftArrowIcon';
 
 const Banner = () => {
   return (
-    <div className="my-16">
-      <div className="max-w-7xl mx-auto text-gray-900">
-        <div className="grid lg:place-items-stretch place-items-center justify-center lg:gap-y-0 gap-y-5 lg:gap-x-6 gap-x-1 sm:grid-cols-2 grid-cols-1">
-          <div className="bg-[#F2F4F5] lg:p-10 p-5 rounded-[6px]">
-            <div className="flex items-center gap-x-5 lg:flex-row flex-col">
-              <div className="flex flex-col items-start gap-y-3 lg:order-1 order-2">
-                <button className="bg-secondary-500 uppercase py-1.5 px-3 rounded-sm text-sm text-white font-semibold lg:mt-0 mt-3">
-                  introducing
-                </button>
-                <div className="text-3xl font-semibold leading-9 capitalize">
-                  <h1>new apple</h1>
-                  <h1>homepod mini</h1>
-                </div>
-
-                <div className="text-base text-[#475156]">
-                  <p>Jam-packed with innovation,</p>
-                  <p> HomePod mini delivers unexpectedly.</p>
-                </div>
-
-                <button className="uppercase rounded-sm px-4 text-white top-3 right-4  text-sm flex items-center gap-x-2 font-semibold leading-10 bg-primary-500">
-                  shop now <RightArrowIcon />
-                </button>
+    <div className="flex lg:flex-row flex-col items-stretch gap-6 my-16">
+      <div className="p-5 md:p-7 lg:p-11 bg-gray-50 rounded flex sm:flex-row items-center justify-between gap-3">
+        <div className="flex flex-col gap-3 sm:gap-4 md:gap-5 w-1/2 md:w-2/3">
+          <div className="flex flex-col gap-2 md:gap-3">
+            <div className="flex flex-col gap-2">
+              <div className="bg-secondary-500 w-fit uppercase py-1 md:py-1.5 px-2 md:px-3 rounded-sm text-xs md:text-sm text-white font-semibold">
+                introducing
               </div>
-
-              <div className="lg:order-2 order-1">
-                <img
-                  src="/assets/Temp/homepod.png"
-                  alt="homepod mini"
-                  className="w-60 h-60"
-                />
+              <div className="text-gray-900 text-lg md:text-2xl lg:text-3xl font-semibold leading-5 ms:leading-6 md:leading-8">
+                New Apple Homepod Mini
               </div>
+            </div>
+            <div className="text-xs sm:text-sm md:text-base text-gray-700 leading-4 md:leading-6">
+              Jam-packed with innovation, HomePod mini delivers unexpectedly.
             </div>
           </div>
 
-          <div className="rounded-[6px] bg-gray-900">
-            <div className="flex items-end justify-between gap-x-5 lg:flex-row flex-col">
-              <div className="lg:p-10 p-5 flex flex-col items-start lg:gap-y-3 gap-y-2 lg:order-1 order-2">
-                <button className="bg-warning-400 uppercase py-1.5 px-3 rounded-sm text-sm text-black font-semibold">
-                  introducing new
-                </button>
-                <div className="text-3xl text-white font-semibold leading-9 capitalize">
-                  <h1>xiomi mi 11 ultra</h1>
-                  <h1>12GB+256GB</h1>
-                </div>
+          <Button
+            endIcon={<LeftArrowIcon className="rotate-180" />}
+            className="!w-fit px-3 md:!px-4 whitespace-nowrap py-2 md:!py-3 !font-public-sans text-xs md:!text-sm !font-semibold !leading-5 !rounded !bg-primary-500 !text-white !hover:bg-primary-500/90"
+          >
+            Shop Now
+          </Button>
+        </div>
 
-                <div className="text-base text-[#ADB7BC]">
-                  <p>Jam-packed with innovation,</p>
-                  <p> HomePod mini delivers unexpectedly.</p>
-                </div>
+        <div className="w-1/2">
+          <Image
+            src="/assets/Temp/homepod.png"
+            alt="homepod mini"
+            className="aspect-square object-cover w-full h-full max-w-[300px]"
+            height={1000}
+            width={1000}
+          />
+        </div>
+      </div>
 
-                <button className="uppercase rounded-sm px-4 text-white lg:top-3 top-2 right-4  text-sm flex items-center gap-x-2 font-semibold leading-10 bg-primary-500">
-                  shop now <RightArrowIcon />
-                </button>
+      <div className="p-5 md:p-7 lg:p-11 bg-gray-900 rounded flex items-center justify-between gap-3">
+        <div className="flex flex-col gap-3 sm:gap-4 md:gap-5 w-1/2 md:w-2/3">
+          <div className="flex flex-col gap-2 md:gap-3">
+            <div className="flex flex-col gap-2">
+              <div className="bg-secondary-500 w-fit uppercase py-1 md:py-1.5 px-2 md:px-3 rounded-sm text-xs md:text-sm text-white font-semibold">
+                introducing new
               </div>
-
-              <div className="lg:mx-0 mx-auto lg:order-2 order-1 lg:mt-0 mt-6">
-                <img
-                  src="/assets/Temp/xeomiPhone.png"
-                  alt="homepod mini"
-                  className="w-60 h-60"
-                />
+              <div className="text-white text-lg md:text-2xl lg:text-3xl font-semibold leading-5 ms:leading-6 md:leading-8">
+                xiomi mi 11 ultra <br /> 12GB+256GB
               </div>
             </div>
+            <div className="text-xs sm:text-sm md:text-base text-gray-300 leading-4 md:leading-6">
+              *Data provided by internal laboratories. Industry measurment.
+            </div>
           </div>
+
+          <Button
+            endIcon={<LeftArrowIcon className="rotate-180" />}
+            className="!w-fit px-3 md:!px-4 whitespace-nowrap py-2 md:!py-3 !font-public-sans text-xs md:!text-sm !font-semibold !leading-5 !rounded !bg-primary-500 !text-white !hover:bg-primary-500/90"
+          >
+            Shop Now
+          </Button>
+        </div>
+
+        <div className="w-1/2">
+          <Image
+            src="/assets/Temp/homepod.png"
+            alt="homepod mini"
+            className="aspect-square object-cover w-full h-full max-w-[300px]"
+            height={1000}
+            width={1000}
+          />
         </div>
       </div>
     </div>
   );
 };
-export default Banner;
+
+export default memo(Banner);

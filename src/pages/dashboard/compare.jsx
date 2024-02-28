@@ -1,7 +1,8 @@
 import Layout from '@/layouts/Layout';
+import { memo } from 'react';
 
 const Compare = () => {
-  return <Layout>Compare</Layout>;
+  return <Layout>Under construction....</Layout>;
 };
 
-export default Compare;
+export default memo(Compare);

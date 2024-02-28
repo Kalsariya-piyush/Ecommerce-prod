@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100&display=swap');
 
 @import "react-toastify/dist/ReactToastify.css";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
 
 @tailwind base;
 @tailwind components;
@@ -148,15 +151,19 @@ body {
 }
 
 .MuiAccordionSummary-content.MuiAccordionSummary-contentGutters.css-o4b71y-MuiAccordionSummary-content {
-  margin: 0 !important;
+  @apply !m-0
 }
 
 .css-1c35hjw-MuiPaper-root-MuiAccordion-root::before {
   @apply !hidden
 }
 
+.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded {
+  @apply !bg-primary-500 !text-white
+}
+
 .MuiAccordionSummary-expandIconWrapper.css-yw020d-MuiAccordionSummary-expandIconWrapper {
-  transform: rotate(0deg) !important;
+  @apply !rotate-0
 }
 
 /* Toastify  */
@@ -164,13 +171,6 @@ body {
   @apply !mt-0.5
 }
 
-.discount-sec {
-  background-image: url("../img/discount.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 450px;
-  width: 100%;
-}
 
 /* Container for the image and overlay */
 .image-container {

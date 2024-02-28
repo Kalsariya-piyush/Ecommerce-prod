@@ -1,7 +1,4 @@
 import { memo } from 'react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
 import Banner from '@/components/HomePage/Banner';
 import Features from '@/components/HomePage/Features';

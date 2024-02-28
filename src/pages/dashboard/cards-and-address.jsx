@@ -1,7 +1,8 @@
 import Layout from '@/layouts/Layout';
+import { memo } from 'react';
 
 const CardsAndAddress = () => {
-  return <Layout>Cards And Address</Layout>;
+  return <Layout>Under construction ... </Layout>;
 };
 
-export default CardsAndAddress;
+export default memo(CardsAndAddress);

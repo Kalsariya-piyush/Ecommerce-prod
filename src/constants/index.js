@@ -7,9 +7,8 @@ const token = () => {
 const HandleSetCookie = (name, value, options = {}) => {
   let cookieString = `${encodeURIComponent(name)}=${encodeURIComponent(value)}`;
 
-  // Set the expiration time to 24 hours
   const expirationDate = new Date();
-  expirationDate.setTime(expirationDate.getTime() + 24 * 60 * 60 * 1000); // 24 hours in milliseconds
+  expirationDate.setTime(expirationDate.getTime() + 24 * 60 * 60 * 1000);
 
   options.expires = expirationDate.toUTCString();
 
@@ -18,21 +17,6 @@ const HandleSetCookie = (name, value, options = {}) => {
   }
 
   document.cookie = cookieString;
-};
-
-const deleteCookie = (cookieName) => {
-  document.cookie =
-    cookieName + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-};
-
-const priceFormatter = (number) => {
-  if (number >= 1000 && number < 1000000) {
-    return `${(number / 1000).toFixed()}k`;
-  } else if (number >= 1000000) {
-    return `${(number / 1000000).toFixed()}m`;
-  } else {
-    return number.toString();
-  }
 };
 
 const getCharacterValidationError = (str) => {
@@ -45,12 +29,22 @@ const ERRORS = {
   RESET_PASSWORD_SUCCESS: 'Password reset successfully.',
 };
 
-export {
-  ERRORS,
-  HandleSetCookie,
-  deleteCookie,
-  getCharacterValidationError,
-  token,
-};
+const TAGS = [
+  {
+    id: 1,
+    label: 'Featured',
+    value: 'featured',
+  },
+  {
+    id: 2,
+    label: 'Popular',
+    value: 'popular',
+  },
+  {
+    id: 3,
+    label: 'Special',
+    value: 'special',
+  },
+];
 
-export default priceFormatter;
+export { ERRORS, HandleSetCookie, TAGS, getCharacterValidationError, token };

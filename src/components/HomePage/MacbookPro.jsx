@@ -1,34 +1,41 @@
-import RightArrowIcon from '../Icons/RightArrowIcon';
+import { Button } from '@mui/material';
+import Image from 'next/image';
+import LeftArrowIcon from '../Icons/LeftArrowIcon';
 
 const MacbookPro = () => {
   return (
     <div className="my-16">
-      <div className="max-w-7xl mx-auto  text-[##191C1F]">
-        <div className="bg-primary-100">
-          <div className="flex justify-between items-center lg:flex-row flex-col">
-            <div className="lg:px-14 px-0 py-0 flex flex-col items-start gap-y-4 lg:order-1 order-2 lg:pb-0 pb-8">
-              <button className="bg-secondary-500 uppercase py-1.5 px-3 rounded-sm text-sm text-white font-semibold">
+      <div>
+        <div className="bg-primary-100 px-5 sm:px-6 md:px-9 lg:px-12 py-5">
+          <div className="flex justify-between items-center">
+            <div className="flex w-1/2 flex-col items-start gap-y-3 md:gap-y-4">
+              <div className="bg-secondary-500 uppercase py-1.5 px-3 rounded-sm text-sm text-white font-semibold">
                 save upto $200
-              </button>
-              <div className="lg:text-5xl md:text-4xl text-3xl font-semibold leading-9 capitalize">
+              </div>
+
+              <div className="lg:text-5xl md:text-3xl text-xl sm:text-2xl font-semibold leading-6 md:leading-9 capitalize">
                 <h1>Macbook Pro</h1>
               </div>
 
-              <div className="lg:text-2xl sm:text-xl text-lg lg:py-2 py-0">
-                <p>Apple M1 Max Chip. 32GB Unified</p>
-                <p> Memory, 1TB SSD Storage</p>
+              <div className="lg:text-2xl md:text-lg sm:text-base text-xs leading-4 md:leading-5 lg:leading-7">
+                Apple M1 Max Chip. 32GB Unified Memory, 1TB SSD Storage.
               </div>
 
-              <button className="uppercase rounded-sm px-4 text-white top-3 right-4  text-sm flex items-center gap-x-2 font-semibold leading-10 bg-primary-500">
-                shop now <RightArrowIcon />
-              </button>
+              <Button
+                endIcon={<LeftArrowIcon className="rotate-180" />}
+                className="!w-fit px-3 md:!px-4 whitespace-nowrap py-2 md:!py-3 !font-public-sans text-xs md:!text-sm !font-semibold !leading-5 !rounded !bg-primary-500 !text-white !hover:bg-primary-500/90"
+              >
+                Shop Now
+              </Button>
             </div>
 
-            <div className="lg:order-2 order-1">
-              <img
+            <div className="w-1/2">
+              <Image
                 src="/assets/Temp/MacbookPro.png"
                 alt="homepod mini"
-                className="mx-auto lg:h-[380px] md:h-2/5 xs:h-[270px] h-auto lg:w-[500px] md:w-2/5 xs:w-[340px] w-auto"
+                className="max-w-96 ml-auto w-full h-full aspect-square object-contain"
+                width={1000}
+                height={1000}
               />
             </div>
           </div>

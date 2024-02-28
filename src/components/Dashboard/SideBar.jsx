@@ -13,7 +13,7 @@ import { TrackOrderIcon } from '../Icons/Dashaboard/TrackOrderIcon';
 import { WishlistIcon } from '../Icons/Dashaboard/WishlistIcon';
 import { DashboardIcon } from '../Icons/Dashaboard/dashboardIcon';
 
-const CATEGORIES = [
+const MENU_ITEMS = [
   {
     id: 1,
     icon: <DashboardIcon />,
@@ -72,7 +72,7 @@ const CATEGORIES = [
     id: 10,
     icon: <LogoutIcon />,
     title: 'Log-out',
-    href: '/dashboard',
+    href: '/',
   },
 ];
 
@@ -91,6 +91,8 @@ export const SideBar = () => {
 
     if (category === 'Log-out') {
       LogoutHandler();
+      router?.push('/');
+      return;
     }
 
     if (router.asPath !== href) {
@@ -98,24 +100,17 @@ export const SideBar = () => {
     }
   };
 
-  console.log(
-    'sssddd',
-    pathSegments[pathSegments.length - 1]
-      .replaceAll('-', ' ')
-      .toLocaleLowerCase()
-      .replace('and', '&')
-  );
   return (
     <div>
       <div
-        MenuListProps={{
+        menuListProps={{
           'aria-labelledby': 'basic-button',
         }}
         className="max-w-[1240px] mx-auto"
       >
         <div className="rounded bg-white border border-gray-100 shadow-2xl w-[264px] py-1">
-          {CATEGORIES && CATEGORIES.length > 0 ? (
-            CATEGORIES?.map(({ id, icon, title, href }) => (
+          {MENU_ITEMS && MENU_ITEMS.length > 0 ? (
+            MENU_ITEMS?.map(({ id, icon, title, href }) => (
               <MenuItem
                 key={id}
                 onClick={() => handleChangeCategory(title, href)}

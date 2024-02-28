@@ -17,6 +17,7 @@ const InputField = ({
   maxRows,
   minRows,
   inputProps,
+  errorClassName,
 }) => {
   return (
     <div className={`relative ${wrapperClassName || ''}`}>
@@ -41,7 +42,11 @@ const InputField = ({
       />
 
       {isError && (
-        <p className="!my-1 absolute -bottom-6 right-0 text-end text-xs font-medium text-error-100">
+        <p
+          className={`!my-1 absolute -bottom-6 right-0 text-end text-xs font-medium text-error-100 ${
+            errorClassName || ''
+          }`}
+        >
           {errorMessage}
         </p>
       )}

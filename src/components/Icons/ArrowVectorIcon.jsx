@@ -1,4 +1,4 @@
-export const ArrowVectorIcon = () => {
+const ArrowVectorIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,3 +16,5 @@ export const ArrowVectorIcon = () => {
     </svg>
   );
 };
+
+export { ArrowVectorIcon };

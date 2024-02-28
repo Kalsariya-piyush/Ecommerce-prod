@@ -1,4 +1,4 @@
-export const CompareIcon = () => {
+const CompareIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -34,3 +34,5 @@ export const CompareIcon = () => {
     </svg>
   );
 };
+
+export { CompareIcon };

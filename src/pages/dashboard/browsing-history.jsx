@@ -1,7 +1,8 @@
 import Layout from '@/layouts/Layout';
+import { memo } from 'react';
 
 const BrowsingHistory = () => {
-  return <Layout>Browsing History</Layout>;
+  return <Layout>Under construction...</Layout>;
 };
 
-export default BrowsingHistory;
+export default memo(BrowsingHistory);
