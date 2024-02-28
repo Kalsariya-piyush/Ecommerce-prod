@@ -24,7 +24,7 @@ export const IsAuthenticated = async (ctx) => {
     return {
       redirect: {
         permanent: false,
-        destination: '/sign-in',
+        destination: '/login',
       },
     };
   }
