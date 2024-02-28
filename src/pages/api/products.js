@@ -27,14 +27,8 @@ export const addProductHandler = async (data) => {
 
 // get all products
 export const getProductsHandler = async () => {
-  // if (process.env.NEXT_PUBLIC_USER === 'ADMIN' && true) {
-  //   const res = await axios.get(
-  //     `${process.env.NEXT_PUBLIC_API_ENDPOINT}/admin/products`
-  //   );
-  //   return res.data;
-  // }
   const res = await axios.get(
-    `${process.env.NEXT_PUBLIC_API_ENDPOINT}/products`,
+    `${process.env.NEXT_PUBLIC_API_ENDPOINT}/product`,
     {
       headers: {
         'Content-Type': 'application/json',

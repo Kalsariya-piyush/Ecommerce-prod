@@ -89,7 +89,9 @@ export const SideBar = () => {
   const handleChangeCategory = (category, href) => {
     setSelectedCategory(category);
 
-    LogoutHandler();
+    if (category === 'Log-out') {
+      LogoutHandler();
+    }
 
     if (router.asPath !== href) {
       router?.push(href);

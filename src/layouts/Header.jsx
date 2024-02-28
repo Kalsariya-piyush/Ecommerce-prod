@@ -192,7 +192,7 @@ const Header = () => {
               <HeartIcon />
             </Link>
 
-            <Link href="/profile">
+            <Link href="/dashboard/profile">
               <ProfileIcon />
             </Link>
           </div>
@@ -287,11 +287,11 @@ const Header = () => {
 
           <div className="flex items-center gap-2">
             <a
-              href="tel:+91 9510449518"
+              href="tel:+91 7698026049"
               className="text-lg text-gray-900 leading-6 flex gap-2 items-center font-normal"
             >
               <CallIcon2 />
-              <p className="lg:block hidden">+91 9510449518</p>
+              <p className="lg:block hidden">+91 7698026049</p>
             </a>
           </div>
         </div>

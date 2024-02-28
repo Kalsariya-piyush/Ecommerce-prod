@@ -1,7 +1,7 @@
-import { token } from '@/constants';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { createContext, useContext, useEffect, useState } from 'react';
+import { token } from '../constants';
 
 export const AuthContext = createContext();
 
